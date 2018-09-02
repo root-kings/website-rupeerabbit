@@ -1,113 +1,47 @@
-doctype html
-//
-    Designed by 
-    Dayshmookh Apps
-    dayshmookh.github.io
+extends layout.pug
 
-    -----
-    
-    Template
-    Directive by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+block headercontent
+    span.logo.icon.fa-paper-plane-o
+    h1 Hi. This is Directive.
+    p
+        | A responsive HTML5 + CSS3 site template designed by 
+        a(href="http://html5up.net") HTML5 UP
+        br
+        | 				and released for free under the 
+        a(href="http://html5up.net/license") Creative Commons license
+        | .
 
-html
-    head
-        title Directive by HTML5 UP
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
-        link(rel="stylesheet" href="/css/main.css")
-    body.is-preload
-        // Header
-        #header
-            span.logo.icon.fa-paper-plane-o
-            h1 Hi. This is Directive.
-            p
-                | A responsive HTML5 + CSS3 site template designed by 
-                a(href="http://html5up.net") HTML5 UP
-                br
-                | 				and released for free under the 
-                a(href="http://html5up.net/license") Creative Commons license
-                | .
-        // Main
-        #main
-            header.major.container.medium
-                h2
-                    | We conduct experiments that
-                    br
-                    | 					may or may not seriously
-                    br
-                    | 					break the universe
-                //
-                    <p>Tellus erat mauris ipsum fermentum<br />
-                    etiam vivamus nunc nibh morbi.</p>
-            .box.alt.container
-                section.feature.left
-                    a.image.icon.fa-signal(href="#")
-                        img(src="images/pic01.jpg" alt="")
-                    .content
-                        h3 The First Thing
-                        p
-                            | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
-                section.feature.right
-                    a.image.icon.fa-code(href="#")
-                        img(src="images/pic02.jpg" alt="")
-                    .content
-                        h3 The Second Thing
-                        p
-                            | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
-                section.feature.left
-                    a.image.icon.fa-mobile(href="#")
-                        img(src="images/pic03.jpg" alt="")
-                    .content
-                        h3 The Third Thing
-                        p
-                            | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
-        
-        // Footer
-        #footer
-            .container.medium
-                header.major.last
-                    h2 Questions or comments?
+block content
+
+    header.major.container.medium
+        h2
+            | We conduct experiments that
+            br
+            | 					may or may not seriously
+            br
+            | 					break the universe
+        //
+            <p>Tellus erat mauris ipsum fermentum<br />
+            etiam vivamus nunc nibh morbi.</p>
+    .box.alt.container
+        section.feature.left
+            a.image.icon.fa-signal(href="#")
+                img(src="images/pic01.jpg" alt="")
+            .content
+                h3 The First Thing
                 p
-                    | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor
-                    | orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.
-                form(method="post" action="#")
-                    .row
-                        .col-6.col-12-mobilep
-                            input(type="text" name="name" placeholder="Name")
-                        .col-6.col-12-mobilep
-                            input(type="email" name="email" placeholder="Email")
-                        .col-12
-                            textarea(name="message" placeholder="Message" rows="6")
-                        .col-12
-                            ul.actions.special
-                                li
-                                    input(type="submit" value="Send Message")
-                ul.icons
-                    li
-                        a.icon.fa-twitter(href="#")
-                            span.label Twitter
-                    li
-                        a.icon.fa-facebook(href="#")
-                            span.label Facebook
-                    li
-                        a.icon.fa-instagram(href="#")
-                            span.label Instagram
-                    li
-                        a.icon.fa-github(href="#")
-                            span.label Github
-                    li
-                        a.icon.fa-dribbble(href="#")
-                            span.label Dribbble
-                ul.copyright
-                    li © Untitled. All rights reserved.
-                    li
-                        | Design: 
-                        a(href="http://html5up.net") HTML5 UP
-        // Scripts
-        script(src="asset/js/jquery.min.js")
-        script(src="asset/js/browser.min.js")
-        script(src="asset/js/breakpoints.min.js")
-        script(src="asset/js/util.js")
-        script(src="asset/js/main.js")
+                    | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+        section.feature.right
+            a.image.icon.fa-code(href="#")
+                img(src="images/pic02.jpg" alt="")
+            .content
+                h3 The Second Thing
+                p
+                    | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+        section.feature.left
+            a.image.icon.fa-mobile(href="#")
+                img(src="images/pic03.jpg" alt="")
+            .content
+                h3 The Third Thing
+                p
+                    | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.

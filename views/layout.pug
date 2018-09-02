@@ -1,0 +1,44 @@
+doctype html
+//
+    Designed by 
+    Dayshmookh Apps
+    dayshmookh.github.io
+
+    -----
+    
+    Template
+    Directive by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+html
+    head
+        title #{title} - Rupee Rabbit
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+
+        include styles.pug
+        
+        block styles
+        
+    body.is-preload
+        //- #page-wrapper
+            header#header.alt
+                h1#logo
+                    img(src="/images/logo-small.png", alt="logo", style="max-height: 28px")
+                    a(href="/") Klathrate
+                    
+                //- include navbar.pug
+        #header
+            block headercontent
+
+
+            
+
+        #main    
+            block content
+        
+        include footer.pug
+        include scripts.pug
+        
+        block scripts
