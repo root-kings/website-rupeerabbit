@@ -1,47 +1,11 @@
 extends layout.pug
 
-block headercontent
-    span.logo.icon.fa-paper-plane-o
-    h1 Hi. This is Directive.
-    p
-        | A responsive HTML5 + CSS3 site template designed by 
-        a(href="http://html5up.net") HTML5 UP
-        br
-        | 				and released for free under the 
-        a(href="http://html5up.net/license") Creative Commons license
-        | .
+block styles
+    link(rel="stylesheet", href="/css/index.css")
+
 
 block content
 
-    header.major.container.medium
-        h2
-            | We conduct experiments that
-            br
-            | 					may or may not seriously
-            br
-            | 					break the universe
-        //
-            <p>Tellus erat mauris ipsum fermentum<br />
-            etiam vivamus nunc nibh morbi.</p>
-    .box.alt.container
-        section.feature.left
-            a.image.icon.fa-signal(href="#")
-                img(src="images/pic01.jpg" alt="")
-            .content
-                h3 The First Thing
-                p
-                    | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
-        section.feature.right
-            a.image.icon.fa-code(href="#")
-                img(src="images/pic02.jpg" alt="")
-            .content
-                h3 The Second Thing
-                p
-                    | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
-        section.feature.left
-            a.image.icon.fa-mobile(href="#")
-                img(src="images/pic03.jpg" alt="")
-            .content
-                h3 The Third Thing
-                p
-                    | Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+block scripts
+    script(src="/js/lib/skrollr.min.js")
+    script(src="/js/index.js")

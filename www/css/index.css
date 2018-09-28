@@ -1,0 +1,25 @@
+
+
+#rabbit {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+
+#rabbit * {
+    position: relative;
+}
+
+
+#rabbit .head{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    left: 10px;
+}
+
+#rabbit .body {
+    width: 90px;
+    height: 100px;
+    border-radius: 45px;
+}
