@@ -60,6 +60,10 @@ main {
 
 /* padding classes */
 
+.padded-slight {
+    padding: 10px;
+}
+
 .padded-compact {
     padding: 20px;
 }
