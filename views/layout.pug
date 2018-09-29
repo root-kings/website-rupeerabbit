@@ -11,16 +11,12 @@ html
         
     body
         
-        header#header.alt
-            h1#logo
-                //-img(src="/images/logo-small.png", alt="logo", style="max-height: 28px")
-                a(href="/") RupeeRabbit
-                
+        header
             include navbar.pug
       
             
 
-        #main    
+        main    
             block content
         
         include footer.pug

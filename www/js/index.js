@@ -1,2 +1,4 @@
-// init controller
-var s = skrollr.init();
+$(document).ready(function(){
+    M.AutoInit();
+    $('.sidenav').sidenav();
+})

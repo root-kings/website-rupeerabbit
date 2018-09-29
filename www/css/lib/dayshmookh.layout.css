@@ -1,9 +1,10 @@
 /* body flex adjustment for  sticky footer */
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-*{
+/* *{
     font-family: 'Montserrat', sans-serif;
-}
+} */
+
 body {
     display: flex;
     min-height: 100vh;
@@ -13,6 +14,7 @@ body {
 main {
     flex: 1 0 auto;
 }
+
 /* --- */
 
 .hidden {
