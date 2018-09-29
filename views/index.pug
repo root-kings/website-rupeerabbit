@@ -2,9 +2,25 @@ extends layout.pug
 
 block styles
     link(rel="stylesheet", href="/css/index.css")
+    link(rel="stylesheet", href="/css/clock.css")
 
 
 block content
+
+    #clockdiv(style='display:block;')
+        div
+            span.days
+            .smalltext Days
+        div
+            span.hours
+            .smalltext Hours
+        div
+            span.minutes
+            .smalltext Minutes
+        div
+            span.seconds
+            .smalltext Seconds
+
 
     section
         .container
@@ -48,3 +64,4 @@ block content
 
 block scripts
     script(src="/js/index.js")
+    script(src="/js/init/clock.js")
