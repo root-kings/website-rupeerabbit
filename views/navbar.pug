@@ -1,19 +1,22 @@
 .nav-fixed
     nav.white
         .nav-wrapper.container
-            a.brand-logo.center.black-text.light(href='#!') Logo
+            a.brand-logo.center(href="/")
+                img(src="/images/rabbit-nav.png")
             a.sidenav-trigger(href='#' data-target='mobile-demo')
                 i.material-icons.black-text.light menu
 
             ul.left.hide-on-med-and-down
                 li
-                    a.black-text.light(href='#') some link
+                    a.blue-text.text-lighten-1.light(href='#') Funds
                 li
-                    a.black-text.light(href='#') some link
+                    a.blue-text.text-lighten-1.light(href='#') Investments
+                li
+                    a.blue-text.text-lighten-1.light(href='#') Personal Finance
 
             ul.right.hide-on-med-and-down
                 li
-                    a.black-text.light(href='#') some link
+                    a.blue-text.text-lighten-1.light(href='#') About
                 
 
 ul#mobile-demo.sidenav
@@ -23,4 +26,3 @@ ul#mobile-demo.sidenav
         a(href='badges.html') Components
     li
         a(href='badges.html') Components
-    

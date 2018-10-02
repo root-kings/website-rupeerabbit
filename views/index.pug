@@ -1,67 +1,82 @@
 extends layout.pug
 
 block styles
+    link(rel="stylesheet", href="/css/aos.css")
     link(rel="stylesheet", href="/css/index.css")
     link(rel="stylesheet", href="/css/clock.css")
 
 
 block content
 
-    #clockdiv(style='display:block;')
-        div
-            span.days
-            .smalltext Days
-        div
-            span.hours
-            .smalltext Hours
-        div
-            span.minutes
-            .smalltext Minutes
-        div
-            span.seconds
-            .smalltext Seconds
+    section
+        div(style='margin-top:30vh')
+            h1.center.light(data-aos='zoom-in') Rupee Rabbit
+            h5.center.light in Action on
+
+        #clockdiv(style='display:block;margin-top:10vh')
+            div
+                span.days(style='width:200px;')
+                .smalltext.black-text.top20 Days
+            div
+                span.hours(style='width:200px;')
+                .smalltext.black-text.top20 Hours
+            div
+                span.minutes(style='width:200px;')
+                .smalltext.black-text.top20 Minutes
+            div
+                span.seconds(style='width:200px;')
+                .smalltext.black-text.top20 Seconds
+
+    div.container(style="padding:20px")
+        img.center(src="images/rabbit.png",style="margin-left:45%;padding-top:40px")
+        h4.center
+        |
+        | The integration of web fonts has always been one of the largest contributing factors to diversity in the overall look and feel of websites today vs. yesterday. Fonts, just like images, play an important role in helping a website’s overall design stand out from the competition.
+
 
 
     section
-        .container
-            .row
-                .col.s12.m4
-                    .card.rounded.padded-compact
-                        h1.light 
-                            i.center.material-icons.light.medium.blue-text filter_vintage
-                            br
-                            | feature
-                        p sdfghj dfghjk 
-                        p dfghd fgh 
-                        p dfgh dfg
-                        p
-                            a.btn.btn-large.blue(href="#") Ankita
-                            
-                .col.s12.m4
-                    .card.rounded.padded-compact
-                        h1.light 
-                            i.center.material-icons.light.medium.blue-text filter_vintage
-                            br
-                            | feature
-                        p sdfghj dfghjk 
-                        p dfghd fgh 
-                        p dfgh dfg
-                        p
-                            a.btn.btn-large.blue(href="#") Ankita
-                            
-                .col.s12.m4
-                    .card.rounded.padded-compact
-                        h1.light 
-                            i.center.material-icons.light.medium.blue-text filter_vintage
-                            br
-                            | feature
-                        p sdfghj dfghjk 
-                        p dfghd fgh 
-                        p dfgh dfg
-                        p
-                            a.btn.btn-large.blue(href="#") Ankita
-                            
+        .row
+            .col.s12.m4
+                .card.rounded.padded-compact.hoverable
+                    h1.light
+                        i.material-icons.center.light.blue-text.medium money
+                        br
+                        | Funds
+                    p.center sdfghj dfghjk
+                    p.center dfghd fgh
+                    p.center dfgh dfg
+                    p
+                        a.center.btn.btn-large.blue(href="#") Get More
+
+            .col.s12.m4
+                .card.rounded.padded-compact.hoverable
+                    h1.light
+                        i.center.material-icons.light.medium.blue-text filter_vintage
+                        br
+                        | Investment
+                    p.center sdfghj dfghjk
+                    p.center dfghd fgh
+                    p.center dfgh dfg
+                    p.center
+                        a.center.btn.btn-large.blue(href="#") Get More
+
+            .col.s12.m4
+                .card.rounded.padded-compact.hoverable
+                    h1.light
+                        i.center.material-icons.light.medium.blue-text filter_vintage
+                        br
+                        | Finance
+                    p.center sdfghj dfghjk
+                    p.center dfghd fgh
+                    p.center dfgh dfg
+                    p.center
+                        a.center.btn.btn-large.blue(href="#") Get More
+
 
 block scripts
+    //script
+        AOS.init();
     script(src="/js/index.js")
+    script(src="/js/aos.js")
     script(src="/js/init/clock.js")
