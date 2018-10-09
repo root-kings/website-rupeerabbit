@@ -1,0 +1,21 @@
+<svg width="299.5" height="189.3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F2378207-A289-40DC-809E-9466463698A5</title>
+    <defs>
+        <rect id="a" width="252" height="152" rx="6" />
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="b">
+            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1" />
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1" />
+        </filter>
+    </defs>
+    <g transform="translate(10 5)" fill="none" fill-rule="evenodd">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#a" />
+        </mask>
+        <use fill="#000" filter="url(#b)" xlink:href="#a" />
+        <use fill="#5A6BFF" xlink:href="#a" />
+        <path fill="#000" style="mix-blend-mode:overlay" opacity=".086" mask="url(#c)" d="M181 14h128v128H181z" />
+        <path fill="#FFAF00" style="mix-blend-mode:overlay" opacity=".418" mask="url(#c)" d="M203 37h83v83h-83z" />
+        <path fill="#FFAF00" style="mix-blend-mode:overlay" opacity=".328" mask="url(#c)" transform="rotate(-13 244.5 78.5)" d="M222.868 56.868h43.264v43.264h-43.264z" />
+    </g>
+</svg>
