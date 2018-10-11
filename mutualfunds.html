@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <style>
@@ -24,7 +25,9 @@
         <div class="navbar-fixed">
             <nav class="white">
                 <div class="nav-wrapper">
-                    <div class="container"><a class="brand-logo" href="index.html"><img src="logo-rupeerabbit.svg" width="50" /></a>
+                    <div class="container">
+                        <a class="grey-text text-darken-4 sidenav-trigger hide-on-large-only" href="#" data-target="nav-mobile" onclick="sidenavinstance.open()"><i class="material-icons">menu</i></a>
+                        <a class="brand-logo" href="index.html"><img src="logo-rupeerabbit.svg" width="50" /></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
                             <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a></li>
                             <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
@@ -33,13 +36,15 @@
                 </div>
             </nav>
         </div>
-        <!--<ul class="sidenav" id="nav-mobile">
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/shop">Shop</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>-->
+        <ul class="sidenav" id="nav-mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mutualfunds.html">Mutual Funds</a></li>
+            <li><a href="finance.html">Personal Finance</a></li>
+            <li><a href="loans.html">Loans</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a></li>
+            <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
+        </ul>
     </header>
 
 
@@ -215,13 +220,18 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright Text
+                <a href="http://root-kings.github.io" target="_blank" class="black-text">  © Root-Kings </a>
                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        M.AutoInit();
 
+    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

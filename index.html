@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>RupeeRabbit</title>
     <style>
         * {
@@ -93,7 +93,8 @@
             <nav class="white">
                 <div class="nav-wrapper">
                     <div class="container">
-                        <a class="brand-logo" href="index.html"><img src="logo-rupeerabbit.svg" width="50px" /></a>
+                        <a class="grey-text text-darken-4 sidenav-trigger hide-on-large-only" href="#" data-target="nav-mobile" onclick="sidenavinstance.open()"><i class="material-icons">menu</i></a>
+                        <a class="brand-logo" href="index.html"><img src="logo-rupeerabbit.svg" width="50" /></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
                             <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a></li>
                             <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
@@ -102,13 +103,15 @@
                 </div>
             </nav>
         </div>
-        <!--<ul class="sidenav" id="nav-mobile">
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/shop">Shop</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>-->
+        <ul class="sidenav" id="nav-mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mutualfunds.html">Mutual Funds</a></li>
+            <li><a href="finance.html">Personal Finance</a></li>
+            <li><a href="loans.html">Loans</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a></li>
+            <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
+        </ul>
     </header>
 
 
@@ -117,7 +120,7 @@
     <div class="parallax-container" style="min-height:95vh">
 
         <div class="parallax">
-            <img src="GRAPH.png" alt="" class="right" style="max-width: 80%">
+            <img src="GRAPH.png" alt="" class="right">
         </div>
 
 
@@ -125,7 +128,7 @@
         <div class="container">
 
             <img src="logo-rupeerabbit.svg" alt="" style="width: 200px">
-            <h1 class="strong" style="font-weight: 900;">RupeeRabbit</h1>
+            <h1 class="strong truncate" style="font-weight: 900;">RupeeRabbit</h1>
             <p>For People who demand better. <br><br> </p>
             <a class="waves-effect waves-light btn" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">REGISTER
                 NOW</a>
@@ -144,10 +147,10 @@
             <div class="container center" style="padding-top: 50px">
                 <a href="#">
 
-                    <div class="circle teal lighten-4 valign-wrapper z-depth-4" style="margin-left: auto; margin-right: auto; width: 60vh; height:60vh; padding: 50px">
+                    <div class="circle teal lighten-4 valign-wrapper z-depth-4" style="margin-left: auto; margin-right: auto; width: 60vh; height:60vh; padding: 50px; max-width: 80%">
                         <h5 style="width: 100%; font-family: 'Times New Roman', Times, serif" class="center white-text">Take
                             risk assessment survey and win coupons worth <br><span class="robo" style="font-size: 2.5em; line-height: 80px; font-weight: 600">2000
-                                INR</span></h2>
+                                INR</span></h5>
                     </div>
 
                     <!-- <img src="2000.png" alt="" style="max-width: 80%">  -->
@@ -164,7 +167,7 @@
         </div>
     </div>
 
-    <section  style="padding-top: 100px;">
+    <section style="padding-top: 100px;">
 
         <div class="container">
             <div class="row">
@@ -182,8 +185,7 @@
                             </div>
                             <div class="card-action">
                                 <div class="center">
-                                    <a class="waves-effect waves-light btn" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
-                                        href="mutualfunds.html">START NOW</a>
+                                    <a class="waves-effect waves-light btn" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" href="mutualfunds.html">START NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -202,8 +204,7 @@
                             </div>
                             <div class="card-action">
                                 <div class="center">
-                                    <a class="waves-effect waves-light btn" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
-                                        href="finance.html">START NOW</a>
+                                    <a class="waves-effect waves-light btn" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" href="finance.html">START NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -229,8 +230,7 @@
                             </div>
                             <div class="card-action">
                                 <div class="center">
-                                    <a class="waves-effect waves-light btn" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
-                                        href="loans.html">START NOW</a>
+                                    <a class="waves-effect waves-light btn" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" href="loans.html">START NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright Text
+                <a href="http://root-kings.github.io" target="_blank" class="black-text">  © Root-Kings </a>
                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
@@ -278,10 +278,13 @@
 
 
 
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         M.AutoInit();
+
     </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
