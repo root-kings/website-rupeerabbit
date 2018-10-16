@@ -178,6 +178,24 @@
         </div>
     </div>
 
+    <div class="row white" style="padding:40px">
+      <h3 class="center strong">Get Your EMI Calculated!!</h3>
+      <br>
+      <h5 class="center light">I've got Loan Ammount of<input type="text" id="Ammount" required="required" style="width:200px" class="center"/>
+        in the Time Period of<input type="text" id="Time" required="required" style="width:200px" class="center"/>
+        Months
+        <br>
+        at an Interest Rate(Annual) of
+        <input type="text" id="InterestRate" required="required" style="width:200px" class="center"/>
+        <br><br>
+        <div id="result" align="center"></div>
+      </h5>
+      <br>
+      <div class="center">
+        <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" onclick="calculateemi()">Get it Calculated</a>
+      </div>
+    </div>
+
 
     <div style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" class="white-text">
         <div class="row" style="padding: 10%;padding-bottom: 90px">
@@ -266,6 +284,28 @@
     <script>
         M.AutoInit();
 
+    </script>
+    <script>
+      function calculateemi() {
+        console.log('one');
+        var ammount = $("#Ammount").val();
+        console.log('one');
+        var time = $("#Time").val();
+        console.log('one');
+        var interest = $("#InterestRate").val()
+        console.log('one');
+        var r = interest / 12 / 100;
+        console.log('one');
+        var a = Math.pow((1 + r), time);
+        console.log('one');
+        var b = (Math.pow((1 + r), time) - 1);
+        console.log('one');
+
+        var finalvalue = ammount * r * a / b;
+        console.log('one');
+        $("#result").empty();
+        $("#result").append("Your EMI = " + finalvalue);
+      }
     </script>
     <script src="index.js"></script>
 </body>
