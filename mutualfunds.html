@@ -67,7 +67,7 @@
             </ul>
         </header>
 
-        <section class="valign-wrapper" style="min-height: 90vh;">
+        <section class="valign-wrapper" style="min-height: 85vh;">
             <div class="container">
                 <div class="row">
                     <div class="col s12 m6">
@@ -341,6 +341,7 @@
 
                 var finalvalue = ammount * r * a / b;
                 if (isNaN('finalvalue')) {
+                    $("#result").empty();
                     $("#result").append("Your Maturity Value = Null");
                 }
                 else {
