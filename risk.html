@@ -30,6 +30,14 @@
         {
             color: white;
         }
+        .input-field > label
+        {
+            color: white;
+        }
+        .input-field > label:active
+        {
+            color: white;
+        }
 
         .circle-text {
             display: table-cell;
@@ -101,211 +109,211 @@
 
         </div>
 
-        <div class="row">
-            <div>
-                <div class="col s12 l3">
-                    <h5 class="center light">
-                        My Annual income is
-                    </h5>
-                </div>
-                <div class="container">
-                    <div class="col s12 l2 center">
-                        <input type="text" id="Ammount" required="required" style="width:200px" class="center input" />
-                    </div>
-                    <div class="col s12 l5">
+        <form action="#" method="post">
+            <div class="row">
+                <div>
+                    <div class="col s12 l3">
                         <h5 class="center light">
-                            My Income is of
+                            My Annual income is
                         </h5>
                     </div>
-                    <div class="col s12 l2" style="color: white;">
-                        <select class="input-field center white-text">
+                    <div class="container">
+                        <div class="col s12 l2 center">
+                            <input type="text" id="Ammount" required="required" style="width:200px" class="center input" name="annualincome" />
+                        </div>
+                        <div class="col s12 l5">
+                            <h5 class="center light">
+                                My Income is of
+                            </h5>
+                        </div>
+                        <div class="col s12 l2" style="color: white;">
+                            <select class="input-field center white-text" name="incometype">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2" class="white-text">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br><br><br>
+                    <div class="col s12 l4">
+
+                        <h5 class="center light">
+                            Family Persons Depending on me
+                        </h5>
+                    </div>
+
+                    <div class="col s12 l2">
+                        <select class="input-field center" name="familypersons">
                             <option value="" disabled selected>Choose your option</option>
                             <option value="1">Option 1</option>
-                            <option value="2" class="white-text">Option 2</option>
+                            <option value="2">Option 2</option>
                             <option value="3">Option 3</option>
                         </select>
                     </div>
-                </div>
-                <br><br><br>
-                <div class="col s12 l4">
+                    <div class="col s12 l4">
 
-                    <h5 class="center light">
-                        Family Persons Depending on me
-                    </h5>
-                </div>
-
-                <div class="col s12 l2">
-                    <select class="input-field center">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                </div>
-                <div class="col s12 l4">
-
-                    <h5 class="center light">
-                        Holding Monthly Savings of
-                    </h5>
-                </div>
-                <div class="col s12 l2">
-                    <select class="input-field center" style="width: 200px;">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                </div>
-                <br><br><br>
-                <div class="col s12 l7 center">
-                    <h5 class="center light">
-                        Do you have fund for emergency
-                    </h5>
-                </div>
-                <div class="col s12 l3 center">
-                    <select class="input-field center" style="width: 200px;">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
-                        <option value="3">I have Insurance</option>
-                    </select>
-                </div>
-                <div class="col s12 l2">
-
-                </div>
-                <div class="col s12 l4">
-                    <h5 class="center light">Do You have Investments </h5>
-                </div>
-                <div class="col s12 l2">
-                    <form>
-                        <select class="country">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </form>
-                </div>
-                <div class="col s12 l4">
-                    <h5 class="center light">
-                        <div id="fundspanel">
-
-                        </div>
-                    </h5>
-                </div>
-                <div class="col s12 l2"></div>
-
-            </div>
-        </div>
-        <div style="padding-top: 50px">
-            <h3 class="center strong">Let's Set Your Goals!</h3>
-            <div class="row">
-                <div class="col s12 l6">
-                    <form action="#">
                         <h5 class="center light">
-                            Set Your Tenure of Investment planning
+                            Holding Monthly Savings of
                         </h5>
-                    </form>
-                </div>
-                <div class="col s12 l4">
-                    <form>
-                        <select class="tenure">
+                    </div>
+                    <div class="col s12 l2">
+                        <select class="input-field center" style="width: 200px;" name="monthlysavings">
                             <option value="" disabled selected>Choose your option</option>
-                            <option value="Three">Short term - upto 3 years </option>
-                            <option value="2">Medium term - 3 to 7 years </option>
-                            <option value="3">Long term - More than 5 years </option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
                         </select>
-                    </form>
-                </div>
-                <div class="col s12 l2">
+                    </div>
+                    <br><br><br>
+                    <div class="col s12 l7 center">
+                        <h5 class="center light">
+                            Do you have fund for emergency
+                        </h5>
+                    </div>
+                    <div class="col s12 l3 center">
+                        <select class="input-field center" style="width: 200px;" name="emergencyfunds">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                            <option value="3">I have Insurance</option>
+                        </select>
+                    </div>
+                    <div class="col s12 l2">
 
-                </div>
-                <div class="col s12 l4">
+                    </div>
+                    <div class="col s12 l4">
+                        <h5 class="center light">Do You have Investments </h5>
+                    </div>
+                    <div class="col s12 l2">
+                        <form>
+                            <select class="country">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="col s12 l4">
+                        <h5 class="center light">
+                            <div id="fundspanel">
 
-                </div>
-                <div class="col s12 l4">
-                    <h5 class="center light">
-                        <div id="termgoals">
-
-                        </div>
-                    </h5>
-                </div>
-                <div class="col s12 l4">
+                            </div>
+                        </h5>
+                    </div>
+                    <div class="col s12 l2"></div>
 
                 </div>
             </div>
-        </div>
+            <div style="padding-top: 50px">
+                <h3 class="center strong">Let's Set Your Goals!</h3>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <form action="#">
+                            <h5 class="center light">
+                                Set Your Tenure of Investment planning
+                            </h5>
+                        </form>
+                    </div>
+                    <div class="col s12 l4">
+                        <form>
+                            <select class="tenure">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="Three">Short term - upto 3 years </option>
+                                <option value="2">Medium term - 3 to 7 years </option>
+                                <option value="3">Long term - More than 5 years </option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="col s12 l2">
+
+                    </div>
+                    <div class="col s12 l4">
+
+                    </div>
+                    <div class="col s12 l4">
+                        <h5 class="center light">
+                            <div id="termgoals">
+
+                            </div>
+                        </h5>
+                    </div>
+                    <div class="col s12 l4">
+
+                    </div>
+                </div>
+
+
+                <div style="padding-top: 50px">
+                    <h3 class="center strong">About You!! <br><br></h3>
+                    <div class="row container">
+                        <div class="col s12 l2">
+                            <h5 class="center light">
+                                Full Name:
+                            </h5>
+                        </div>
+                        <div class="col s12 l4">
+                            <input id="fullname" type="text" class="validate white-text center" name="fullname">
+                        </div>
+                        <div class="col s12 l2">
+                            <h5 class="center light">
+                                Age:
+                            </h5>
+                        </div>
+                        <div class="col s12 l4">
+                            <input id="age" type="text" class="validate white-text center" name="age">
+                        </div>
+                    </div>
+                    <div class="row container">
+                        <div class="col s12 l2">
+                            <h5 class="center light">
+                                Gender:
+                            </h5>
+                        </div>
+                        <div class="col s12 l4">
+                            <select class="gender" name="gender">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female </option>
+                                <option value="Other">Other </option>
+                            </select>
+                        </div>
+                        <div class="col s12 l2">
+                            <h5 class="center light">
+                                Phone:
+                            </h5>
+                        </div>
+                        <div class="col s12 l4">
+                            <input id="phone" type="email" class="validate white-text center" name="phone">
+                        </div>
+                    </div>
+                    <div class="row container">
+                        <div class="col s12 l2">
+                            <h5 class="center light">
+                                City:
+                            </h5>
+                        </div>
+                        <div class="col s12 l4">
+                            <input id="city" type="email" class="validate white-text center" name="city">
+                        </div>
+                        <div class="col s12 l2">
+                            <h5 class="center light">
+                                Email:
+                            </h5>
+                        </div>
+                        <div class="col s12 l4">
+                            <input id="email" type="email" class="validate white-text center" name="email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <button class="btn waves-effect waves-light hoverable white" type="submit" name="action" style="height: 50px;color: #625eeb;border-radius: 25px;" ><h6 class="center light black-text">Submit</h6></button>
+            </div>
+        </form>
     </section>
 
-    <!--<div class="row white center" style="padding:40px">
-        <div>
 
-            <form>
-                <h5 class="center light">I've an Annual Income of<input type="text" id="Ammount" required="required" style="width:200px" class="center input" />
-                    ,My Income is of
-                    <select class="input-field center" style="width: 200px;">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                    Type
-                    <br>
-                    Family Persons Depending on me
-                    <input id="persondependent" required="required" style="width:200px" class="center input dropdown-trigger" data-target='person' />
-                    <ul id='person' class='dropdown-content'>
-                        <li>
-                            <a href="#!" onclick="count('One')">One</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Two')">Two</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Three')">Three</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Four)">Four</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Five')">Five</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Six')">Six</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Seven')">Seven</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Eight')">Eight</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="count('Nine')">Nine</a>
-                        </li>
-                    </ul>
-                    , The Interest Compounding was<input type="text" id="compoundinterest" required="" aria-required="true" style="width:200px" class="center dropdown-trigger input black-text" data-target='dropdown1' />
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li>
-                            <a href="#!" onclick="monthly()">Monthly</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="quaterly()">Quaterly</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="halfyearly()">Half Yearly</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="yearly()">Yearly</a>
-                        </li>
-                    </ul>
-                    ,
-                    <br><br>
-                    <div id="result" align="center"></div>
-                </h5>
-            </form>
-        </div>
-        <br>
-        <div id="result" align="center" style="color:#006;margin-top:20px;"></div>
-
-    </div>-->
     <footer class="page-footer" style="background-color: #00d09c">
         <div class="container">
             <div class="row">
