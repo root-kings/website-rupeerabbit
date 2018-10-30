@@ -109,7 +109,7 @@
 
         </div>
 
-        <form action="#" method="post">
+        <form action="https://sahilkindarle.000webhostapp.com/add.php" method="POST">
             <div class="row">
                 <div>
                     <div class="col s12 l3">
@@ -129,7 +129,7 @@
                         <div class="col s12 l2" style="color: white;">
                             <select class="input-field center white-text" name="incometype">
                                 <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Option 1</option>
+                                <option value="option1">Option 1</option>
                                 <option value="2" class="white-text">Option 2</option>
                                 <option value="3">Option 3</option>
                             </select>
@@ -186,18 +186,20 @@
                         <h5 class="center light">Do You have Investments </h5>
                     </div>
                     <div class="col s12 l2">
-                        <form>
-                            <select class="country">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </form>
+                        <select class="country">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="Yes" id="yesfunds">Yes</option>
+                            <option value="No" id="nofunds">No</option>
+                        </select>
                     </div>
                     <div class="col s12 l4">
                         <h5 class="center light">
-                            <div id="fundspanel">
-
+                            <div>
+                                <select name="fundspanel" id="fundspanel" class="fundspanel">
+                                    <option value="Yes">lol</option>
+                                    <option value="Yes">lol1</option>
+                                    <option value="Yes">lol2</option>
+                                </select>
                             </div>
                         </h5>
                     </div>
@@ -209,21 +211,17 @@
                 <h3 class="center strong">Let's Set Your Goals!</h3>
                 <div class="row">
                     <div class="col s12 l6">
-                        <form action="#">
-                            <h5 class="center light">
-                                Set Your Tenure of Investment planning
-                            </h5>
-                        </form>
+                        <h5 class="center light">
+                            Set Your Tenure of Investment planning
+                        </h5>
                     </div>
                     <div class="col s12 l4">
-                        <form>
-                            <select class="tenure">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="Three">Short term - upto 3 years </option>
-                                <option value="2">Medium term - 3 to 7 years </option>
-                                <option value="3">Long term - More than 5 years </option>
-                            </select>
-                        </form>
+                        <select class="tenure">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="Three">Short term - upto 3 years </option>
+                            <option value="seven">Medium term - 3 to 7 years </option>
+                            <option value="fiveplus">Long term - More than 5 years </option>
+                        </select>
                     </div>
                     <div class="col s12 l2">
 
@@ -263,8 +261,7 @@
                         <div class="col s12 l4">
                             <input id="age" type="text" class="validate white-text center" name="age">
                         </div>
-                    </div>
-                    <div class="row container">
+
                         <div class="col s12 l2">
                             <h5 class="center light">
                                 Gender:
@@ -284,17 +281,16 @@
                             </h5>
                         </div>
                         <div class="col s12 l4">
-                            <input id="phone" type="email" class="validate white-text center" name="phone">
+                            <input id="phone" type="text" class="validate white-text center" name="phone">
                         </div>
-                    </div>
-                    <div class="row container">
+
                         <div class="col s12 l2">
                             <h5 class="center light">
                                 City:
                             </h5>
                         </div>
                         <div class="col s12 l4">
-                            <input id="city" type="email" class="validate white-text center" name="city">
+                            <input id="city" type="text" class="validate white-text center" name="city">
                         </div>
                         <div class="col s12 l2">
                             <h5 class="center light">
@@ -306,9 +302,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="center">
-                <button class="btn waves-effect waves-light hoverable white" type="submit" name="action" style="height: 50px;color: #625eeb;border-radius: 25px;" ><h6 class="center light black-text">Submit</h6></button>
+                <button class="btn waves-effect waves-light" type="submit">Submit</button>
             </div>
         </form>
     </section>
@@ -392,7 +386,7 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $("select.country").change(function() {
+            /*$("select.country").change(function() {
                 var yes = "Yes";
                 var selectedCountry = $(".country option:selected").val();
                 //alert("You have selected the country - " + selectedCountry);
@@ -401,8 +395,19 @@
                 if (n == "0") {
                     //$("p").html("Hello <b>world!</b>");
                     //alert("lolxd");
-                    $("#fundspanel").empty();
-                    $("#fundspanel").append('<p>ksa ky</p>');
+                    //$("#fundspanel").empty();
+                    $("#fundspanel").append('<option value="option6">option6</option>');
+                    $("#fundspanel").append('<option value="option7">option7</option>');
+                    $("#fundspanel").append('<option value="option8">option8</option>');
+                    $("#fundspanel").append('<option value="option9">option9</option>');
+
+
+                    //$("#fundspanel").append(function() {
+                    //  return $("<select id='comboboxShowLabel'>")
+                    //    .append("<option value=''>Hide or show labels?</option>")
+                    //  .append("<option value='Show Labels'>Show Label</option>")
+                    //.append("<option value='Hide Labels'>Hide Label</option>");
+                    //});
 
                     console.log("one");
                     //str = '<select class="input-field center" style="width: 200px;"><option value="" disabled selected>Choose your option</option><option value="1">Yes</option><option value="2">No</option><option value="3">I have Insurance</option></select>';\
@@ -416,35 +421,35 @@
                 if (n != "0") {
                     $("#fundspanel").empty();
                 }
-            });
+            });*/
             $("select.tenure").change(function() {
-                console.log("two");
                 var yes = "Three";
-                console.log("two");
                 var selectedTenure = $(".tenure option:selected").val();
-                console.log("two");
                 var n = selectedTenure.localeCompare(yes);
                 console.log("two");
                 if (n == "0") {
                     //$("p").html("Hello <b>world!</b>");
                     //alert("lolxd");
                     $("#termgoals").empty();
-                    console.log('teo');
-                    /*var $select = $('<select id="selectone"></select>')
-                        .append("<option value=''>Hide or show labels?</option>")
-                        .append("<option value='Show Labels'>Show Label</option>")
-                        .append("<option value='Hide Labels'>Hide Label</option>");
-                    $("#termgoals").html($select);*/
+                    //$("#termgoals").append(function() {
+                    //  return $("<select id='comboboxShowLabel'>")
+                    //    .append("<option value=''>Hide or show labels?</option>")
+                    //  .append("<option value='Show Labels'>Show Label</option>")
+                    //.append("<option value='Hide Labels'>Hide Label</option>");
+                    //});
                 }
                 if (n != "0") {
                     $("#termgoals").empty();
                     console.log('not zero');
                 }
             });
+
+
         });
 
     </script>
     <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="risk.js"></script>
 </body>
 

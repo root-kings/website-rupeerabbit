@@ -323,7 +323,8 @@
             M.AutoInit();
         </script>
         <script>
-            function calculatesip() {
+            function calculatesip() 
+            {
                 var flag = 1;
                 console.log('one');
                 var ammount = $("#Ammount").val();
@@ -338,7 +339,6 @@
                 console.log('one');
                 var b = (Math.pow((1 + r), time) - 1);
                 console.log('one');
-
                 var finalvalue = ammount * r * a / b;
                 if (isNaN('finalvalue')) {
                     $("#result").empty();
