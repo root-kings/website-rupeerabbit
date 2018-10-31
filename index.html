@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="aos.css">
+    <script src="aos.js"></script>
     <title>RupeeRabbit</title>
     <style>
         * {
@@ -120,12 +122,12 @@
     <div class="parallax-container" style="min-height:95vh">
 
         <div class="parallax">
-            <img src="GRAPH.png" alt="" class="right">
+            <img src="GRAPH.png" alt="" class="right" width="100%">
         </div>
 
 
 
-        <div class="container">
+        <div class="container" data-aos="zoom-in">
 
             <img src="logo-rupeerabbit.svg" alt="" style="width: 200px">
             <h1 class="strong truncate" style="font-weight: 900;">RupeeRabbit</h1>
@@ -199,7 +201,7 @@
                         <div class="card-stacked container">
                             <div class="card-title center">
                                 <br>
-                                <h4 style="font-weight: 900;">Sole Finance</h4>
+                                <h4 style="font-weight: 900;">Personal Finance</h4>
                             </div>
                             <div class="card-content">
                                 <p class="center">Spend Management Done!! <br><br></p>
@@ -245,13 +247,13 @@
 
 
     <footer class="page-footer" style="background-color: #00d09c">
-        <div class="container">
+        <div>
             <div class="row">
                 <div class="col l6 s12">
-                    <img src="logo-rupeerabbit.svg" alt="" width="100">
-                    <h5 class="white-text">RupeeRabbit</h5>
-                    <p class="grey-text text-lighten-4">For people who demand better.</p>
-                    <div class="row">
+                    <img src="logo-rupeerabbit white.svg" alt="" width="100" style="margin-left:20px">
+                    <h5 class="white-text" style="margin-left:20px">RupeeRabbit</h5>
+                    <p class="grey-text text-lighten-4" style="margin-left:20px">For people who demand better.</p>
+                    <div class="row" style="margin-left:20px">
                         <div class="col s4 ">
                             <u><a href="mutualfunds.html" class="white-text">Mutual Funds</a></u>
                         </div>
@@ -266,7 +268,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col l4 offset-l2 s12">
+                <div class="col s12 l2">
+                    <div class="row center-align" style="margin-top:160px">
+                        <div class="col s12">
+                            Terms & Cond <sup>n</sup>
+                            <br><br><br>
+                        </div>
+                        <div class="col s12">
+                            FAQ
+                            <br><br><br>
+                        </div>
+                        <div class="col s12">
+                            PR
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col l4 s12">
                     <img src="banner.b13358b8.png" alt="">
                 </div>
             </div>
@@ -285,7 +303,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         M.AutoInit();
-
+        AOS.init();
     </script>
     <script src="index.js"></script>
 </body>
