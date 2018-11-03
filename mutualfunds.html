@@ -1,372 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mutual Funds | RupeeRabbit
-        </title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Funds | RupeeRabbit
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    </head>
-    <style>
-        * {
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<style>
+    * {
             font-family: 'Montserrat', sans-serif;
         }
     </style>
 
-    <body>
-        <header>
-            <div class="navbar-fixed">
-                <nav class="white">
-                    <div class="nav-wrapper">
-                        <div class="container">
-                            <a class="grey-text text-darken-4 sidenav-trigger hide-on-large-only" href="#" data-target="nav-mobile" onclick="sidenavinstance.open()">
-                                <i class="material-icons">menu</i>
-                            </a>
-                            <a class="brand-logo" href="index.html"><img src="logo-rupeerabbit.svg" width="50"/></a>
-                            <ul class="right hide-on-med-and-down" id="nav-mobile">
-                                <li>
-                                    <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <ul class="sidenav" id="nav-mobile">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="mutualfunds.html">Mutual Funds</a>
-                </li>
-                <li>
-                    <a href="finance.html">Personal Finance</a>
-                </li>
-                <li>
-                    <a href="loans.html">Loans</a>
-                </li>
-                <li>
-                    <a href="aboutus.html">About Us</a>
-                </li>
-                <li>
-                    <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a>
-                </li>
-                <li>
-                    <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
-                </li>
-            </ul>
-        </header>
-
-        <section class="valign-wrapper" style="min-height: 85vh;">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m6">
-
-                        <i>
-                            <img src="https://png.icons8.com/windows/80/00d09c/rupee.png">
-                        </i>
-                        
-                        <h3 class="strong" style="font-weight: 400;">Mutual Funds Advisor</h3>
-                        <p>Investments Made Easy
-                            <br><br>
-                        </p>
-                        <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">START INVESTING</a>
-
-                    </div>
-                    <div class="col s12 m6">
-                        <img src="ON40S30.png" alt="" width="600" style="margin-top: 40px; max-width: 95%">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-
-            <div class="row white-text" style="background: #625eeb;margin-bottom: 0px">
-                <div>
-                    <h4 class="center strong white-text" style="font-weight: 900"><br><br>
-                        Solutions to every question of yours.</h4>
-                    <p class="center" style="font-weight: 600">We help you create returns-driven, tax-efficient portfolios
-                        <br>that align with your goals.</p>
-                    <div class="row container">
-                        <div class="col s12 m6 l6">
-                            <h4 class="center strong white-text" style="font-weight: 900"><br><br>
-                                Popular Solutions.</h4>
-                            <p class="center" style="font-weight: 700">Our technology helps make this possible by lowering taxes, lowering fees, diversifying your portfolio.</p>
-                            <img src="lolxd.png" alt="" width="400" style="max-width: 90%">
-                        </div>
-                        <div class="col s12 m6 l6">
-                            <h4 class="center strong white-text" style="font-weight: 900"><br><br>
-                                Custom Solutions.</h4>
-                            <p class="center" style="font-weight: 700">Create a custom suite of investment portfolios
-                                <br>
-                                or allocations in minutes.</p>
-                            <img src="custom.png" alt="" width="400" style="max-width: 90%">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <div class="row white" style="padding:40px">
-            <h3 class="center strong">Create your Systematic Investment Plan</h3>
-            <br>
-            <div>
-                <form>
-                    <h5 class="center light">I've got Monthly Investment of<input type="text" id="Ammount" required="required" style="width:200px" class="center"/>
-                        for the Time Period of<input type="text" id="Time" required="" aria-required="true" style="width:200px" class="center"/>
-                        Months
-                        <br>
-                        at an Interest Rate of
-                        <input type="text" id="InterestRate" required="required" style="width:200px" class="center"/>, The Interest Compounding was<input type="text" id="compoundinterest" required="" aria-required="true" style="width:200px" class="center dropdown-trigger" data-target='dropdown1'/>,
-                        <ul id='dropdown1' class='dropdown-content'>
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="white">
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <a class="grey-text text-darken-4 sidenav-trigger hide-on-large-only" href="#" data-target="nav-mobile"
+                            onclick="sidenavinstance.open()">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <a class="brand-logo" href="index.html"><img src="logo-rupeerabbit.svg" width="50" /></a>
+                        <ul class="right hide-on-med-and-down" id="nav-mobile">
                             <li>
-                                <a href="#!" onclick="monthly()">Monthly</a>
+                                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a>
                             </li>
                             <li>
-                                <a href="#!" onclick="quaterly()">Quaterly</a>
-                            </li>
-                            <li>
-                                <a href="#!" onclick="halfyearly()">Half Yearly</a>
-                            </li>
-                            <li>
-                                <a href="#!" onclick="yearly()">Yearly</a>
+                                <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="nav-mobile">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="mutualfunds.html">Mutual Funds</a>
+            </li>
+            <li>
+                <a href="finance.html">Personal Finance</a>
+            </li>
+            <li>
+                <a href="loans.html">Loans</a>
+            </li>
+            <li>
+                <a href="aboutus.html">About Us</a>
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a>
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="valign-wrapper" style="min-height: 85vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+
+                    <i>
+                        <img src="https://png.icons8.com/windows/80/00d09c/rupee.png">
+                    </i>
+
+                    <h3 class="strong" style="font-weight: 400;">Mutual Funds Advisor</h3>
+                    <p>Investments Made Easy
                         <br><br>
-                        <div id="result" align="center"></div>
-                    </h5>
-                </form>
+                    </p>
+                    <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">START
+                        INVESTING</a>
+
+                </div>
+                <div class="col s12 m6">
+                    <img src="ON40S30.png" alt="" width="600" style="margin-top: 40px; max-width: 95%">
+                </div>
             </div>
-            <br>
-            <div id="result" align="center" style="color:#006;margin-top:20px;"></div>
-            <div class="center">
-                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" onclick="calculatesip()" type="submit">Get it Calculated</a>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="row white-text" style="background: #625eeb;margin-bottom: 0px">
+            <div>
+                <h4 class="center strong white-text" style="font-weight: 900"><br><br>
+                    Solutions to every question of yours.</h4>
+                <p class="center" style="font-weight: 600">We help you create returns-driven, tax-efficient portfolios
+                    <br>that align with your goals.</p>
+                <div class="row container">
+                    <div class="col s12 m6 l6">
+                        <h4 class="center strong white-text" style="font-weight: 900"><br><br>
+                            Popular Solutions.</h4>
+                        <p class="center" style="font-weight: 700">Our technology helps make this possible by lowering
+                            taxes, lowering fees, diversifying your portfolio.</p>
+                        <img src="lolxd.png" alt="" width="400" style="max-width: 90%">
+                    </div>
+                    <div class="col s12 m6 l6">
+                        <h4 class="center strong white-text" style="font-weight: 900"><br><br>
+                            Custom Solutions.</h4>
+                        <p class="center" style="font-weight: 700">Create a custom suite of investment portfolios
+                            <br>
+                            or allocations in minutes.</p>
+                        <img src="custom.png" alt="" width="400" style="max-width: 90%">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <section style="background-color: #00b2f6;padding: 50px">
+    </section>
 
-            <div class="container">
-                <h2 style="font-weight: 900" class="center white-text">WHAT WE DO?</h2>
+    <div class="row white" style="padding:40px">
+        <h3 class="center strong">Create your Systematic Investment Plan</h3>
+        <br>
+        <div>
+            <form>
+                <h5 class="center light">I've got Monthly Investment of<input type="text" id="Ammount" required="required"
+                        style="width:200px" class="center" />
+                    for the Time Period of<input type="text" id="Time" required="" aria-required="true" style="width:200px"
+                        class="center" />
+                    Months
+                    <br>
+                    at an Interest Rate of
+                    <input type="text" id="InterestRate" required="required" style="width:200px" class="center" />, The
+                    Interest Compounding was<input type="text" id="compoundinterest" required="" aria-required="true"
+                        style="width:200px" class="center dropdown-trigger" data-target='dropdown1' />,
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li>
+                            <a href="#!" onclick="monthly()">Monthly</a>
+                        </li>
+                        <li>
+                            <a href="#!" onclick="quaterly()">Quaterly</a>
+                        </li>
+                        <li>
+                            <a href="#!" onclick="halfyearly()">Half Yearly</a>
+                        </li>
+                        <li>
+                            <a href="#!" onclick="yearly()">Yearly</a>
+                        </li>
+                    </ul>
+                    <br><br>
+                    <div id="result" align="center"></div>
+                </h5>
+            </form>
+        </div>
+        <br>
+        <div id="result" align="center" style="color:#006;margin-top:20px;"></div>
+        <div class="center">
+            <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
+                onclick="calculatesip()" type="submit">Get it Calculated</a>
+        </div>
+    </div>
 
-                <div class="row">
-                    <div class="col s12 m4">
-                        <h6 class="light grey-text text-lighten-4">We Plan</h6>
-                        <h4 class="indigo-text text-darken-4">YOUR BRIGHT FUTURE<br><br></h4>
-                        <p class="left white-text " style="font-weight: 500;font-size: 20px">Tax implication
-                            <br>Retirement Planning
-                            <br>Investment Risk Assessment</p>
+    <section style="background-color: #00b2f6;padding: 50px">
 
-                    </div>
-
-                    <div class="col s12 m4">
-                        <h6 class="light grey-text text-lighten-4">We Monitor</h6>
-                        <h4 class="indigo-text text-darken-4">YOUR PORTFOLIO HEALTH</h4>
-                        <p class="left white-text " style="font-weight: 500;font-size: 20px">We rebalance using deposits
-                            <br>
-                            and dividends.
-                        </p>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <img src="banner.b13358b8.png" alt="">
-                    </div>
-                </div>
-
-                <br>
-
-                <div class="row">
-                    <div class="col s12 m4">
-                        <img src="cap.png" alt="" width="400px" style="margin-top: 40px;max-width: 90%">
-                    </div>
-
-                    <div class="col s12 m4">
-                        <h6 class="light grey-text text-lighten-4">We Plan your</h6>
-                        <h4 class="indigo-text text-darken-4">PATH TO FISCAL GOAL
-                            <br></h4>
-                        <p class="left white-text " style="font-weight: 500;font-size: 20px">For Retirement
-                            <br>For futher Education
-                            <br>For your Exploration</p>
-
-                    </div>
-
-                    <div class="col s12 m4">
-                        <h6 class="light grey-text text-lighten-4">We Integrate</h6>
-                        <h4 class="indigo-text text-darken-4">DYNAMIC TAX EFFICIENCY</h4>
-                        <p class="left white-text " style="font-weight: 500;font-size: 20px">When a fund loses value...
-                            <br>
-                            When we build your portfolio...
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
+        <div class="container">
+            <h2 style="font-weight: 900" class="center white-text">WHAT WE DO?</h2>
 
             <div class="row">
-                <div class="col s12 center">
-                    <img src="logo-rupeerabbit.svg" alt="" width="150">
-                    <h2 style="font-weight: 900" class="center">HOW IT WORKS?</h2>
+                <div class="col s12 m4">
+                    <h6 class="light grey-text text-lighten-4">We Plan</h6>
+                    <h4 class="indigo-text text-darken-4">YOUR BRIGHT FUTURE<br><br></h4>
+                    <p class="left white-text " style="font-weight: 500;font-size: 20px">Tax implication
+                        <br>Retirement Planning
+                        <br>Investment Risk Assessment</p>
+
+                </div>
+
+                <div class="col s12 m4">
+                    <h6 class="light grey-text text-lighten-4">We Monitor</h6>
+                    <h4 class="indigo-text text-darken-4">YOUR PORTFOLIO HEALTH</h4>
+                    <p class="left white-text " style="font-weight: 500;font-size: 20px">We rebalance using deposits
+                        <br>
+                        and dividends.
+                    </p>
+                </div>
+
+                <div class="col s12 m4">
+                    <img src="banner.b13358b8.png" alt="">
                 </div>
             </div>
 
-            <div class="container">
-                <div class="row">
+            <br>
 
-                    <div class="col s12 m4">
-                        <div class="card medium hoverable z-depth-1">
+            <div class="row">
+                <div class="col s12 m4">
+                    <img src="cap.png" alt="" width="400px" style="margin-top: 40px;max-width: 90%">
+                </div>
 
-                            <div class="card-title center">
-                                <br>
-                                <h4 style="font-weight: 900;color: #00b2f6">We'll learn a bit about you.</h4>
-                            </div>
-                            <div class="card-content">
-                                <p style="font-size: 1.3em" class="center">Where are you in your financial life and what are you investing for? Dream vacation? Nice little retirement?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="card medium hoverable z-depth-1">
-
-                            <div class="card-title center">
-                                <br>
-                                <h4 style="font-weight: 900;color: #00b2f6">We'll build your Portfolio
-                                </h4>
-                            </div>
-                            <div class="card-content">
-                                <p style="font-size: 1.3em" class="center">Based on your answers we'll recommend an investing plan designed for your risk tolerance and time horizon.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card medium hoverable z-depth-1">
-
-                            <div class="card-title center">
-                                <br>
-                                <h4 style="font-weight: 900;color: #00b2f6">Putting our Magic to work</h4>
-                            </div>
-                            <div class="card-content">
-                                <p style="font-size: 1.3em" class="center">And we'll keep working. Once we get you set up we'll manage your portfolio with our tax-smart technology.
-                                    <br></p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col s12 m4">
+                    <h6 class="light grey-text text-lighten-4">We Plan your</h6>
+                    <h4 class="indigo-text text-darken-4">PATH TO FISCAL GOAL
+                        <br></h4>
+                    <p class="left white-text " style="font-weight: 500;font-size: 20px">For Retirement
+                        <br>For futher Education
+                        <br>For your Exploration</p>
 
                 </div>
-            </div>
 
-        </section>
-
-        <footer class="page-footer" style="background-color: #00d09c">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <img src="logo-rupeerabbit.svg" alt="" width="100">
-                        <h5 class="white-text">RupeeRabbit</h5>
-                        <p class="grey-text text-lighten-4">For people who demand better.</p>
-                        <div class="row">
-                            <div class="col s4 ">
-                                <u>
-                                    <a href="mutualfunds.html" class="white-text">Mutual Funds</a>
-                                </u>
-                            </div>
-                            <div class="col s4 ">
-                                <u>
-                                    <a href="finance.html" class="white-text">Personal Finance</a>
-                                </u>
-                            </div>
-                            <div class="col s4 ">
-                                <u>
-                                    <a href="loans.html" class="white-text">Loans</a>
-                                </u>
-                            </div>
-                            <div class="col s4 ">
-                                <u>
-                                    <a href="aboutus.html" class="white-text">About Us</a>
-                                </u>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <img src="banner.b13358b8.png" alt="">
-                    </div>
+                <div class="col s12 m4">
+                    <h6 class="light grey-text text-lighten-4">We Integrate</h6>
+                    <h4 class="indigo-text text-darken-4">DYNAMIC TAX EFFICIENCY</h4>
+                    <p class="left white-text " style="font-weight: 500;font-size: 20px">When a fund loses value...
+                        <br>
+                        When we build your portfolio...
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="row">
+            <div class="col s12 center">
+                <img src="logo-rupeerabbit.svg" alt="" width="150">
+                <h2 style="font-weight: 900" class="center">HOW IT WORKS?</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col s12 m4">
+                    <div class="card medium hoverable z-depth-1">
+
+                        <div class="card-title center">
+                            <br>
+                            <h4 style="font-weight: 900;color: #00b2f6">We'll learn a bit about you.</h4>
+                        </div>
+                        <div class="card-content">
+                            <p style="font-size: 1.3em" class="center">Where are you in your financial life and what
+                                are you investing for? Dream vacation? Nice little retirement?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="card medium hoverable z-depth-1">
+
+                        <div class="card-title center">
+                            <br>
+                            <h4 style="font-weight: 900;color: #00b2f6">We'll build your Portfolio
+                            </h4>
+                        </div>
+                        <div class="card-content">
+                            <p style="font-size: 1.3em" class="center">Based on your answers we'll recommend an
+                                investing plan designed for your risk tolerance and time horizon.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card medium hoverable z-depth-1">
+
+                        <div class="card-title center">
+                            <br>
+                            <h4 style="font-weight: 900;color: #00b2f6">Putting our Magic to work</h4>
+                        </div>
+                        <div class="card-content">
+                            <p style="font-size: 1.3em" class="center">And we'll keep working. Once we get you set up
+                                we'll manage your portfolio with our tax-smart technology.
+                                <br></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="page-footer" style="background-color: #00d09c">
+        <div>
+            <div class="row">
+
+
+                <div class="col l8 s12">
+
+                    <div class="row">
+                        <div class="col s12">
+                            <img src="logo-rupeerabbit white.svg" alt="" width="100">
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 l4">
+                            <h5 class="white-text" style="margin-left:20px">RupeeRabbit</h5>
+                            <p class="grey-text text-lighten-4" style="margin-left:20px">For people who demand
+                                better.</p>
+
+                        </div>
+
+
+
+                        <div class="col s12 l4">
+
+                            <ul>
+                                <li><a href="mutualfunds.html" class="white-text">Mutual Funds</a></li>
+
+
+                                <li><a href="finance.html" class="white-text">Personal Finance</a></li>
+
+
+                                <li><a href="loans.html" class="white-text">Loans</a></li>
+
+
+                                <li><a href="aboutus.html" class="white-text">About Us</a></li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="col s12 l4">
+                            <ul>
+                                <li><a class="white-text" href="#">Terms & Conditions</a></li>
+                                <li><a class="white-text" href="#">FAQ</a></li>
+                                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col l4 s12">
+                    <img src="banner.b13358b8.png" alt="">
+                </div>
+
+            </div>
+
+
             <div class="footer-copyright">
-                <div class="container">
-                    <a href="http://root-kings.github.io" target="_blank" class="black-text">
-                        © Root-Kings
-                    </a>
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                </div>
+
+                <a href="http://rupeerabbit.com" target="_blank" class="white-text" style="padding-left: 20px; padding-right:20px;">&copy;
+                    RupeeRabbit 2018 </a>
+                <a href="http://root-kings.github.io" target="_blank" class="white-text" style="padding-left: 20px; padding-right:20px;">Designed
+                    by Root-Kings </a>
+
             </div>
-        </footer>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script>
-            M.AutoInit();
-        </script>
-        <script>
-            function calculatesip() 
-            {
-                var flag = 1;
-                console.log('one');
-                var ammount = $("#Ammount").val();
-                console.log('one');
-                var time = $("#Time").val();
-                console.log('one');
-                var interest = $("#InterestRate").val()
-                console.log('one');
-                var r = interest / 12 / 100;
-                console.log('one');
-                var a = Math.pow((1 + r), time);
-                console.log('one');
-                var b = (Math.pow((1 + r), time) - 1);
-                console.log('one');
-                var finalvalue = ammount * r * a / b;
-                if (isNaN('finalvalue')) {
-                    $("#result").empty();
-                    $("#result").append("Your Maturity Value = Null");
-                }
-                else {
-                    console.log('one');
-                    $("#result").empty();
-                    $("#result").append("Your Maturity Value = " + finalvalue);
-                }
-            }
 
-            function monthly() {
-                document.getElementById("compoundinterest").value = "Monthly";
-            }
+    </footer>
 
-            function quaterly() {
-                document.getElementById("compoundinterest").value = "Quaterly";
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+    <script>
+        function calculatesip() {
+            var flag = 1;
+            console.log('one');
+            var ammount = $("#Ammount").val();
+            console.log('one');
+            var time = $("#Time").val();
+            console.log('one');
+            var interest = $("#InterestRate").val()
+            console.log('one');
+            var r = interest / 12 / 100;
+            console.log('one');
+            var a = Math.pow((1 + r), time);
+            console.log('one');
+            var b = (Math.pow((1 + r), time) - 1);
+            console.log('one');
+            var finalvalue = ammount * r * a / b;
+            if (isNaN('finalvalue')) {
+                $("#result").empty();
+                $("#result").append("Your Maturity Value = Null");
+            } else {
+                console.log('one');
+                $("#result").empty();
+                $("#result").append("Your Maturity Value = " + finalvalue);
             }
-            function halfyearly() {
-                document.getElementById("compoundinterest").value = "Half Yearly";
-            }
-            function yearly() {
-                document.getElementById("compoundinterest").value = "Yearly";
-            }
-        </script>
-        <script src="index.js"></script>
-    </body>
+        }
+
+        function monthly() {
+            document.getElementById("compoundinterest").value = "Monthly";
+        }
+
+        function quaterly() {
+            document.getElementById("compoundinterest").value = "Quaterly";
+        }
+
+        function halfyearly() {
+            document.getElementById("compoundinterest").value = "Half Yearly";
+        }
+
+        function yearly() {
+            document.getElementById("compoundinterest").value = "Yearly";
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
 
 </html>
