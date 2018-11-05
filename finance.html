@@ -359,9 +359,11 @@
             console.log('one');
 
             var finalvalue = ammount * r * a / b;
-            console.log('one');
+            console.log('fv : ' + finalvalue);
+            var roundedvalue = Math.round(finalvalue);
+            console.log('rv : ' + roundedvalue);
             $("#result").empty();
-            $("#result").append("Your EMI = " + finalvalue);
+            $("#result").append("Your EMI = Rs. " + roundedvalue);
         }
     </script>
     <script src="index.js"></script>

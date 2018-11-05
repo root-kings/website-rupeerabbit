@@ -372,25 +372,31 @@
             var flag = 1;
             console.log('one');
             var ammount = $("#Ammount").val();
-            console.log('one');
+            console.log(ammount);
             var time = $("#Time").val();
-            console.log('one');
+            console.log(time);
             var interest = $("#InterestRate").val()
-            console.log('one');
+            console.log(interest);
             var r = interest / 12 / 100;
-            console.log('one');
+            console.log(r);
             var a = Math.pow((1 + r), time);
-            console.log('one');
+            console.log(a);
             var b = (Math.pow((1 + r), time) - 1);
-            console.log('one');
+            console.log(b);
             var finalvalue = ammount * r * a / b;
-            if (isNaN('finalvalue')) {
+            var roundedvalue = Math.round(finalvalue)
+            console.log('fv: '+ roundedvalue);
+            if (isNaN(roundedvalue)) {
+                console.log("nan one");
                 $("#result").empty();
+                console.log("nan one");
                 $("#result").append("Your Maturity Value = Null");
+                console.log("nan one");
             } else {
-                console.log('one');
+                console.log('no nan one');
                 $("#result").empty();
-                $("#result").append("Your Maturity Value = " + finalvalue);
+                console.log("no nan one");
+                $("#result").append("Your Maturity Value = " + roundedvalue);
             }
         }
 
