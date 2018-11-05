@@ -1,10 +1,10 @@
 $(document).ready(function () {
-            $("#yesfunds").click(function () {
-                $("[.fundspanel]").show();
-            });
+    $("#yesfunds").click(function () {
+        $("[.fundspanel]").show();
+    });
 
-            $("#nofunds").click(function () {
-                $("[.fundspanel]").hide();
-            });
+    $("#nofunds").click(function () {
+        $("[.fundspanel]").hide();
+    });
 
-        });
+});

@@ -66,8 +66,9 @@
             <nav class="white">
                 <div class="nav-wrapper">
                     <div class="container">
-                        <a class="grey-text text-darken-4 sidenav-trigger hide-on-large-only" href="#" data-target="nav-mobile" onclick="sidenavinstance.open()"><i class="material-icons">menu</i></a>
-                        <a class="brand-logo" href="index.html"><img src="logo-rupeerabbit.svg" width="45" /></a>
+                        <a class="grey-text text-darken-4 sidenav-trigger hide-on-large-only" href="#" data-target="nav-mobile"
+                            onclick="sidenavinstance.open()"><i class="material-icons">menu</i></a>
+                        <a class="brand-logo" href="index.html"><img src="images/logo-rupeerabbit.svg" width="45" /></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
                             <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a></li>
                             <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
@@ -119,7 +120,8 @@
                     </div>
                     <div class="container">
                         <div class="col s12 l2 center">
-                            <input type="text" id="Ammount" required="required" style="width:200px" class="center input" name="annualincome" />
+                            <input type="text" id="Ammount" required="required" style="width:200px" class="center input"
+                                name="annualincome" />
                         </div>
                         <div class="col s12 l5">
                             <h5 class="center light">
@@ -308,40 +310,88 @@
     </section>
 
 
+
+
+
     <footer class="page-footer" style="background-color: #00d09c">
-        <div class="container">
+        <div>
             <div class="row">
-                <div class="col l6 s12">
-                    <img src="logo-rupeerabbit.svg" alt="" width="100">
-                    <h5 class="white-text">RupeeRabbit</h5>
-                    <p class="grey-text text-lighten-4">For people who demand better.</p>
+
+
+                <div class="col l8 s12">
+
                     <div class="row">
-                        <div class="col s4 ">
-                            <u><a href="mutualfunds.html" class="white-text">Mutual Funds</a></u>
+                        <div class="col s12">
+                            <img src="images/logo-rupeerabbit white.svg" alt="" width="100">
+
                         </div>
-                        <div class="col s4 ">
-                            <u><a href="finance.html" class="white-text">Personal Finance</a></u>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 l4">
+                            <h5 class="white-text" style="margin-left:20px">RupeeRabbit</h5>
+                            <p class="grey-text text-lighten-4" style="margin-left:20px">For people who demand
+                                better.</p>
+
                         </div>
-                        <div class="col s4 ">
-                            <u><a href="loans.html" class="white-text">Loans</a></u>
+
+
+
+                        <div class="col s12 l4">
+
+                            <ul>
+                                <li><a href="mutualfunds.html" class="white-text">Mutual Funds</a></li>
+
+
+                                <li><a href="finance.html" class="white-text">Personal Finance</a></li>
+
+
+                                <li><a href="loans.html" class="white-text">Loans</a></li>
+
+
+                                <li><a href="aboutus.html" class="white-text">About Us</a></li>
+                            </ul>
                         </div>
-                        <div class="col s4 ">
-                            <u><a href="aboutus.html" class="white-text">About Us</a></u>
+
+
+
+                        <div class="col s12 l4">
+                            <ul>
+                                <li><a class="white-text" href="#">Terms & Conditions</a></li>
+                                <li><a class="white-text" href="#">FAQ</a></li>
+                                <li><a class="white-text" href="#">Privacy Policy</a></li>
+                            </ul>
+
+
+
                         </div>
                     </div>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                    <img src="banner.b13358b8.png" alt="">
+
+
+                <div class="col l4 s12">
+                    <img src="images/banner.b13358b8.png" alt="">
                 </div>
+
             </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <a href="http://root-kings.github.io" target="_blank" class="black-text"> © Root-Kings </a>
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+
+
+            <div class="footer-copyright">
+
+                <a href="http://rupeerabbit.com" target="_blank" class="white-text" style="padding-left: 20px; padding-right:20px;">&copy;
+                    RupeeRabbit 2018 - ARN 89033</a>
+                <a href="http://root-kings.github.io" target="_blank" class="white-text" style="padding-left: 20px; padding-right:20px;">Designed
+                    by Root-Kings </a>
+
             </div>
-        </div>
+
+
     </footer>
+
+
+
+
 
     <script>
         function monthly() {
@@ -377,15 +427,13 @@
             console.log(time);
             document.getElementById("tenure").value = " " + time;
         }
-
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         M.AutoInit();
-
     </script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             /*$("select.country").change(function() {
                 var yes = "Yes";
                 var selectedCountry = $(".country option:selected").val();
@@ -422,7 +470,7 @@
                     $("#fundspanel").empty();
                 }
             });*/
-            $("select.tenure").change(function() {
+            $("select.tenure").change(function () {
                 var yes = "Three";
                 var selectedTenure = $(".tenure option:selected").val();
                 var n = selectedTenure.localeCompare(yes);
@@ -446,7 +494,6 @@
 
 
         });
-
     </script>
     <script src="js/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
