@@ -8,17 +8,19 @@ $(document).ready(function () {
     //AOS.init();
 
     new TypeIt('#example1', {
-        strings: ["This is a great string.", "But here is a better one."],
-        speed: 50,
+        strings: ["Online Investment", "New Home Savings", "Dream Vacation", "College Fund", "Retirement Prosperity", "Wealth Planning"],
+        speed: 100,
         breakLines: false,
-        autoStart: false
-      });
-      
-      
+        autoStart: false,
+        loop: true,
+        nextStringDelay: [10, 1500]
+    });
+
+
 
 });
 
 document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, options);
+    var instances = M.Dropdown.init(elems);
 });
