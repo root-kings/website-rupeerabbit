@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"/>
     <link rel="stylesheet" href="css/aos.css">
     <script src="js/aos.js"></script>
     <title>RupeeRabbit</title>
@@ -97,8 +98,7 @@
                     <div class="container">
                         <a class="grey-text text-darken-4 sidenav-trigger hide-on-large-only" href="#" data-target="nav-mobile"
                             onclick="sidenavinstance.open()"><i class="material-icons">menu</i></a>
-                        <a class="brand-logo" href="index.html"><img src="images/logo-rupeerabbit.svg" width="45"
-                                data-aos="fade-down" data-aos-offset="1000" /></a>
+                        <a class="brand-logo" href="index.html"><img src="images/logo-rupeerabbit.svg" width="45"/></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
                             <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">LOGIN</a></li>
                             <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
@@ -129,11 +129,13 @@
 
 
 
-        <div class="container" data-aos="zoom-in">
+        <div class="container" >
 
             <img src="images/logo-rupeerabbit.svg" alt="" style="width: 200px">
             <h1 class="strong truncate" style="font-weight: 900;">RupeeRabbit</h1>
-            <p>For People who demand better. <br><br> </p>
+            <p id="example1"></p>
+            
+            <!-- <p>For People who demand better. <br><br> </p> -->
             <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">GET
                 STARTED</a>
 
@@ -306,7 +308,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div>    
 
 
                 <div class="col l4 s12">
