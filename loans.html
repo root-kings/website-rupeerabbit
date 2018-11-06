@@ -59,8 +59,7 @@
                         Loans and Credit Cards</h5>
                     <p>Borrow at Ease!! <br><br>
                     </p>
-                    <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">START
-                        INVESTING</a>
+                    <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">Apply for Loan</a>
                 </div>
             </div>
             <div class="col s12 m8 center">
@@ -146,7 +145,7 @@
     <div class="row" style="padding:40px" id="emicalciloans">
         <h3 class="center strong">Get Your EMI Calculated!!</h3>
         <br>
-        <h5 class="center light">I've got Loan Ammount of<input type="text" id="Ammount" required="required" style="width:200px"
+        <h5 class="center light">I've got Loan Amount of<input type="text" id="Amount" required="required" style="width:200px"
                 class="center" />
             in the Time Period of<input type="text" id="Time" required="required" style="width:200px" class="center" />
             Months
@@ -313,7 +312,7 @@
     <script>
         function calculateemi() {
             console.log('one');
-            var ammount = $("#Ammount").val();
+            var Amount = $("#Amount").val();
             console.log('one');
             var time = $("#Time").val();
             console.log('one');
@@ -326,7 +325,7 @@
             var b = (Math.pow((1 + r), time) - 1);
             console.log('one');
 
-            var finalvalue = ammount * r * a / b;
+            var finalvalue = Amount * r * a / b;
             console.log('fv : ' + finalvalue);
             var roundedvalue = Math.round(finalvalue);
             console.log('rv : ' + roundedvalue);
