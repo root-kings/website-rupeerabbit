@@ -127,7 +127,7 @@
         <br>
         <div>
             <form>
-                <h5 class="center light">I've got Monthly Investment of<input type="text" id="Ammount" required="required"
+                <h5 class="center light">I've got Monthly Investment of<input type="text" id="Amount" required="required"
                         style="width:200px" class="center" />
                     for the Time Period of<input type="text" id="Time" required="" aria-required="true" style="width:200px"
                         class="center" />
@@ -374,8 +374,8 @@
         function calculatesip() {
             var flag = 1;
             console.log('one');
-            var ammount = $("#Ammount").val();
-            console.log(ammount);
+            var Amount = $("#Amount").val();
+            console.log(Amount);
             var time = $("#Time").val();
             console.log(time);
             var interest = $("#InterestRate").val()
@@ -386,7 +386,7 @@
             console.log(a);
             var b = (Math.pow((1 + r), time) - 1);
             console.log(b);
-            var finalvalue = ammount * r * a / b;
+            var finalvalue = Amount * r * a / b;
             var roundedvalue = Math.round(finalvalue)
             console.log('fv: ' + roundedvalue);
             if (isNaN(roundedvalue)) {
