@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/loans.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 </head>
@@ -15,6 +16,7 @@
     * {
         font-family: 'Montserrat', sans-serif;
     }
+    
 </style>
 
 <body>
@@ -140,7 +142,34 @@
 
 
 
-    <div class="white">
+
+    <div class="row" style="padding:40px" id="emicalciloans">
+        <h3 class="center strong">Get Your EMI Calculated!!</h3>
+        <br>
+        <h5 class="center light">I've got Loan Ammount of<input type="text" id="Ammount" required="required" style="width:200px"
+                class="center" />
+            in the Time Period of<input type="text" id="Time" required="required" style="width:200px" class="center" />
+            Months
+            <br>
+            at an Interest Rate(Annual) of
+            <input type="text" id="InterestRate" required="required" style="width:200px" class="center" />
+            <br><br>
+            <div id="result" class="center-align"></div>
+        </h5>
+        <br>
+        <div class="center">
+            <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
+                onclick="calculateemi()">Get it Calculated</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div style="background: #F7F7F7;">
         <div class="row center">
             <img src="images/logo-rupeerabbit.svg" alt="" width="150">
             <h2 style="font-weight: 900" class="center">The Rabbit's Support</h2>
@@ -280,6 +309,30 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         M.AutoInit();
+    </script>
+    <script>
+        function calculateemi() {
+            console.log('one');
+            var ammount = $("#Ammount").val();
+            console.log('one');
+            var time = $("#Time").val();
+            console.log('one');
+            var interest = $("#InterestRate").val()
+            console.log('one');
+            var r = interest / 12 / 100;
+            console.log('one');
+            var a = Math.pow((1 + r), time);
+            console.log('one');
+            var b = (Math.pow((1 + r), time) - 1);
+            console.log('one');
+
+            var finalvalue = ammount * r * a / b;
+            console.log('fv : ' + finalvalue);
+            var roundedvalue = Math.round(finalvalue);
+            console.log('rv : ' + roundedvalue);
+            $("#result").empty();
+            $("#result").append("Your EMI = Rs. " + roundedvalue);
+        }
     </script>
     <script src="js/index.js"></script>
 </body>
