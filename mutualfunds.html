@@ -13,8 +13,7 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -37,8 +36,7 @@
                         <a class="brand-logo" href="index.html"><img src="images/logo-rupeerabbit.svg" width="45" /></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
                             <li>
-                                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
-                                    href="login.html">LOGIN</a>
+                                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" href="login.html">LOGIN</a>
                             </li>
                             <li>
                                 <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
@@ -65,8 +63,7 @@
                 <a href="aboutus.html">About Us</a>
             </li>
             <li>
-                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
-                    href="login.html">LOGIN</a>
+                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" href="login.html">LOGIN</a>
             </li>
             <li>
                 <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
@@ -128,35 +125,19 @@
 
     </section>
 
-    <div class="row" style="padding:40px">
+    <div class="row white" style="padding:40px">
         <h3 class="center strong">Create your Systematic Investment Plan</h3>
         <br>
         <div>
             <form>
-                <h5 class="center light">I've got Monthly Investment of<input type="text" id="Amount" required="required"
+                <h5 class="center light">I've got Monthly Investment of<input type="text" id="investment" required="required"
                         style="width:200px" class="center" />
-                    for the Time Period of<input type="text" id="Time" required="" aria-required="true" style="width:200px"
+                    for the period of  <input type="text" id="years" required="" aria-required="true" style="width:200px"
                         class="center" />
-                    Months
+                    years
                     <br>
-                    at an Interest Rate of
-                    <input type="text" id="InterestRate" required="required" style="width:200px" class="center" />%,
-                    The
-                    Interest Compounding was<input type="text" id="compoundinterest" required="" aria-required="true"
-                        style="width:200px" class="center dropdown-trigger" data-target='dropdown1' />,
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li>
-                            <a href="#!" onclick="monthly()">Monthly</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="quaterly()">Quaterly</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="halfyearly()">Half Yearly</a>
-                        </li>
-                        <li>
-                            <a href="#!" onclick="yearly()">Yearly</a>
-                        </li>
+                    at an annualrate of
+                    <input type="text" id="annualrate" required="required" style="width:200px" class="center" />%, 
                     </ul>
                     <br><br>
                     <div id="result" align="center"></div>
@@ -164,9 +145,10 @@
             </form>
         </div>
         <br>
-        <div id="result" style="color:#006;margin-top:20px;"></div>
+        <div id="result" align="center" style="color:#006;margin-top:20px;"></div>
         <div class="center">
-            <a class="waves-effect waves-light btn" style="background:linear-gradient(135deg,#8f53d7,#1e83ef);"  onclick="calculatesip()" type="submit">Get it Calculated</a>
+            <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
+                onclick="calculatesip()" type="submit">Get it Calculated</a>
         </div>
     </div>
 
@@ -177,20 +159,16 @@
 
         <div class="row" style="padding: 30px">
             <div class="col s12 m4">
-                <h5 class="light grey-text text-lighten-4">Newbie to mutual funds? You'll feel right at home with
-                    hassle-free investing & tracking</h5><br><br>
-                <h5 class="light grey-text text-lighten-4">We help you choose, using information that matters - Ratings
-                    from CRISIL & value research<br><br></h5>
-
+                <h5 class="light grey-text text-lighten-4">Newbie to mutual funds? You'll feel right at home with hassle-free investing & tracking</h5><br><br>
+                <h5 class="light grey-text text-lighten-4">We help you choose, using information that matters - Ratings from CRISIL & value research<br><br></h5>
+               
 
             </div>
 
             <div class="col s12 m4">
-                <h5 class="light grey-text text-lighten-4">Complete transparency & peace of mind. Your hard earned
-                    money goes straight to reputed AMCs</h5><br>
-                <h5 class="white-text strong">Experties that make all the difference. Tailor your Portfolio to your
-                    Wishes & Life-Goals </h5>
-
+                <h5 class="light grey-text text-lighten-4">Complete transparency & peace of mind. Your hard earned money goes straight to reputed AMCs</h5><br>
+                <h5 class="white-text strong">Experties that make all the difference. Tailor your Portfolio to your Wishes & Life-Goals  </h5>
+            
             </div>
 
             <div class="col s12 m3">
@@ -216,7 +194,7 @@
                 </div>
 
                 <div class="col s12 m4">
-                    <h6 class="light grey-text text-lighten-4">We Integrate</h6>
+                    <h6 class="light grey-text text-lighten-4">We Integannualrate</h6>
                     <h4 class="white-text">DYNAMIC TAX EFFICIENCY</h4>
                     <p class="left white-text " style="font-weight: 500;font-size: 20px">When a fund loses value...
                         <br>
@@ -264,7 +242,7 @@
                         </div>
                         <div class="card-content">
                             <p style="font-size: 1.3em" class="center">Based on your answers we'll recommend an
-                                investing plan designed for your risk tolerance and time horizon.
+                                investing plan designed for your risk tolerance and years horizon.
                             </p>
                         </div>
 
@@ -298,35 +276,28 @@
             <div class="row">
 
 
-                <div class="col l9 s12">
+                <div class="col l8 s12">
 
                     <div class="row">
                         <div class="col s12">
                             <img src="images/logo-rupeerabbit white.svg" alt="" width="100">
-                            <h5 class="white-text" style="margin-left:20px">RupeeRabbit</h5>
+
                         </div>
 
                     </div>
 
                     <div class="row">
                         <div class="col s12 l4">
-                            <h5 class="white-text" style="margin-left:20px">Corporate Office:-</h5>
-                            <p class="grey-text text-lighten-4" style="margin-left:20px"> E-704, <br> langston
-                                Apartment, <br> Kharadi, <br> Pune 411014</p>
-
+                            <h5 class="white-text" style="margin-left:20px">RupeeRabbit</h5>
+                            <p class="grey-text text-lighten-4" style="margin-left:20px">4th floor B.B Tower,<br> next to Sai vatika Lawn <br>near Equitas Small Finance Bank <br>Shankar Nagar - Nagpur</p>
 
                         </div>
+
+
 
                         <div class="col s12 l4">
-                            <h5 class="white-text" style="margin-left:20px">Principle Office:-</h5>
-                            <p class="grey-text text-lighten-4" style="margin-left:20px">4th floor B.B Tower,<br> next
-                                to Sai vatika Lawn <br>near Equitas Small Finance Bank <br>Shankar Nagar - Nagpur</p>
-                        </div>
 
-
-                        <div class="col s12 l2">
-
-                            <ul style="margin-right:50px">
+                            <ul>
                                 <li><a href="mutualfunds.html" class="white-text">Mutual Funds</a></li>
 
 
@@ -342,7 +313,7 @@
 
 
 
-                        <div class="col s12 l2">
+                        <div class="col s12 l4">
                             <ul>
                                 <li><a class="white-text" href="#">Terms & Conditions</a></li>
                                 <li><a class="white-text" href="#">FAQ</a></li>
@@ -356,7 +327,7 @@
                 </div>
 
 
-                <div class="col l3 s12">
+                <div class="col l4 s12">
                     <img src="images/banner.b13358b8.png" alt="">
                 </div>
 
@@ -385,20 +356,19 @@
         function calculatesip() {
             var flag = 1;
             console.log('one');
-            var Amount = $("#Amount").val();
-            console.log(Amount);
-            var time = $("#Time").val();
-            console.log(time);
-            var interest = $("#InterestRate").val()
-            console.log(interest);
-            var r = interest / 12 / 100;
-            console.log(r);
-            var a = Math.pow((1 + r), time);
-            console.log(a);
-            var b = (Math.pow((1 + r), time) - 1);
-            console.log(b);
-            var finalvalue = Amount * r * a / b;
-            var roundedvalue = Math.round(finalvalue)
+            var investment = $("#investment").val();
+            console.log(investment);
+            var years = $("#years").val();
+            console.log(years);
+            var annualrate = $("#annualrate").val()
+            console.log(annualrate); 
+  var monthlyrate = annualrate / 12 / 100; //annualrate of interest
+  var months = years * 12;  //Time years 
+  var futureValue = 0; //Final Value
+
+  futureValue = investment * (Math.pow(1 + monthlyrate, months)-1) / 
+monthlyrate;
+            roundedvalue= futureValue.toFixed(2);
             console.log('fv: ' + roundedvalue);
             if (isNaN(roundedvalue)) {
                 console.log("nan one");
@@ -415,19 +385,19 @@
         }
 
         function monthly() {
-            document.getElementById("compoundinterest").value = "Monthly";
+            document.getElementById("compoundannualrate").value = "Monthly";
         }
 
         function quaterly() {
-            document.getElementById("compoundinterest").value = "Quaterly";
+            document.getElementById("compoundannualrate").value = "Quaterly";
         }
 
         function halfyearly() {
-            document.getElementById("compoundinterest").value = "Half Yearly";
+            document.getElementById("compoundannualrate").value = "Half Yearly";
         }
 
         function yearly() {
-            document.getElementById("compoundinterest").value = "Yearly";
+            document.getElementById("compoundannualrate").value = "Yearly";
         }
     </script>
     <script src="js/index.js"></script>
