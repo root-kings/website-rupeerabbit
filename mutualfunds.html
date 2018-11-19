@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +13,17 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <style>
     * {
             font-family: 'Montserrat', sans-serif;
+        }
+        .slider .slides li{
+            opacity: 1;
         }
     </style>
 
@@ -39,7 +40,8 @@
                         <a class="brand-logo" href="index.html"><img src="images/logo-rupeerabbit.svg" width="45" /></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
                             <li>
-                                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" href="login.html">LOGIN</a>
+                                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
+                                    href="login.html">LOGIN</a>
                             </li>
                             <li>
                                 <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
@@ -66,7 +68,8 @@
                 <a href="aboutus.html">About Us</a>
             </li>
             <li>
-                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" href="login.html">LOGIN</a>
+                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
+                    href="login.html">LOGIN</a>
             </li>
             <li>
                 <a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a>
@@ -74,28 +77,50 @@
         </ul>
     </header>
 
-    <section class="valign-wrapper" style="min-height: 85vh;">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 m6">
+    <section style="min-height: 85vh;">
+        <!-- <div class="container"> -->
+        <div class="row" style="height:100%">
+            <div class="col s12 m6" style="padding-top: 190px">
+                <i>
+                    <img src="https://png.icons8.com/windows/80/00d09c/rupee.png">
+                </i>
+                <h3 class="strong" style="font-weight: 400;">Mutual Funds Advisor</h3>
+                <p>Investments Made Easy
+                    <br><br>
+                </p>
+                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">START
+                    INVESTING</a>
 
-                    <i>
-                        <img src="https://png.icons8.com/windows/80/00d09c/rupee.png">
-                    </i>
-
-                    <h3 class="strong" style="font-weight: 400;">Mutual Funds Advisor</h3>
-                    <p>Investments Made Easy
-                        <br><br>
-                    </p>
-                    <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">START
-                        INVESTING</a>
-
-                </div>
-                <div class="col s12 m6">
-                    <img src="images/ON40S30.png" alt="" width="600" style="margin-top: 40px; max-width: 95%">
-                </div>
             </div>
+            <div class="col s12 m6">
+                <!-- <img src="images/ON40S30.png" alt="" width="600" style="margin-top: 40px; max-width: 95%"> -->
+
+                <div class="slider white">
+                    <ul class="slides">
+                        <li class="white">
+                            <img src="images/ON40S30.png" alt="">
+
+                            <!-- <div class="caption center-align">
+                            <h3>This is our biglol Tagline!</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                          </div> -->
+                        </li>
+
+                        <li class="white">
+                            <img src="images/one.png" alt="" class="center">
+                </div>
+
+                </li>
+
+
+
+
+                </ul>
+            </div>
+
         </div>
+        </div>
+        <!-- </div> -->
     </section>
 
     <section>
@@ -135,12 +160,12 @@
             <form>
                 <h5 class="center light">I've got Monthly Investment of<input type="text" id="investment" required="required"
                         style="width:200px" class="center" />
-                    for the period of  <input type="text" id="years" required="" aria-required="true" style="width:200px"
+                    for the period of <input type="text" id="years" required="" aria-required="true" style="width:200px"
                         class="center" />
                     years
                     <br>
                     at an annualrate of
-                    <input type="text" id="annualrate" required="required" style="width:200px" class="center" />%, 
+                    <input type="text" id="annualrate" required="required" style="width:200px" class="center" />%,
                     </ul>
                     <br><br>
                     <div id="result" align="center"></div>
@@ -152,7 +177,8 @@
         <div class="center">
             <!-- <a class="waves-effect waves-light btn" style="background:linear-gradient(135deg,#8f53d7,#1e83ef);"  
                 onclick="calculatesip()" type="submit">Get it Calculated</a> -->
-                <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" onclick="calculatesip()">Get My Savings</a>
+            <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
+                onclick="calculatesip()">Get My Savings</a>
         </div>
     </div>
 
@@ -163,16 +189,20 @@
 
         <div class="row" style="padding: 30px">
             <div class="col s12 m4">
-                <h5 class="light grey-text text-lighten-4"><span style="font-size:30px">Newbie</span> to mutual funds? You'll feel right at home with hassle-free investing & tracking</h5><br><br>
-                <h5 class="light grey-text text-lighten-4">We help you choose, using information that matters - Ratings from CRISIL & value research<br><br></h5>
-               
+                <h5 class="light grey-text text-lighten-4"><span style="font-size:30px">Newbie</span> to mutual funds?
+                    You'll feel right at home with hassle-free investing & tracking</h5><br><br>
+                <h5 class="light grey-text text-lighten-4">We help you choose, using information that matters - Ratings
+                    from CRISIL & value research<br><br></h5>
+
 
             </div>
 
             <div class="col s12 m4">
-                <h5 class="light grey-text text-lighten-4">Complete transparency & peace of mind. Your hard earned money goes straight to reputed AMCs</h5><br>
-                <h5 class="white-text strong">Experties that make all the difference. Tailor your Portfolio to your Wishes & Life-Goals  </h5>
-            
+                <h5 class="light grey-text text-lighten-4">Complete transparency & peace of mind. Your hard earned
+                    money goes straight to reputed AMCs</h5><br>
+                <h5 class="white-text strong">Experties that make all the difference. Tailor your Portfolio to your
+                    Wishes & Life-Goals </h5>
+
             </div>
 
             <div class="col s12 m3">
@@ -280,28 +310,35 @@
             <div class="row">
 
 
-                <div class="col l8 s12">
+                <div class="col l9 s12">
 
                     <div class="row">
                         <div class="col s12">
                             <img src="images/logo-rupeerabbit white.svg" alt="" width="100">
-
+                            <h5 class="white-text" style="margin-left:20px">RupeeRabbit</h5>
                         </div>
 
                     </div>
 
                     <div class="row">
                         <div class="col s12 l4">
-                            <h5 class="white-text" style="margin-left:20px">RupeeRabbit</h5>
-                            <p class="grey-text text-lighten-4" style="margin-left:20px">4th floor B.B Tower,<br> next to Sai vatika Lawn <br>near Equitas Small Finance Bank <br>Shankar Nagar - Nagpur</p>
+                            <h5 class="white-text" style="margin-left:20px">Corporate Office:-</h5>
+                            <p class="grey-text text-lighten-4" style="margin-left:20px"> E-704, <br> langston
+                                Apartment, <br> Kharadi, <br> Pune 411014</p>
+
 
                         </div>
 
-
-
                         <div class="col s12 l4">
+                            <h5 class="white-text" style="margin-left:20px">Principle Office:-</h5>
+                            <p class="grey-text text-lighten-4" style="margin-left:20px">4th floor B.B Tower,<br> next
+                                to Sai vatika Lawn <br>near Equitas Small Finance Bank <br>Shankar Nagar - Nagpur</p>
+                        </div>
 
-                            <ul>
+
+                        <div class="col s12 l2">
+
+                            <ul style="margin-right:50px">
                                 <li><a href="mutualfunds.html" class="white-text">Mutual Funds</a></li>
 
 
@@ -317,7 +354,7 @@
 
 
 
-                        <div class="col s12 l4">
+                        <div class="col s12 l2">
                             <ul>
                                 <li><a class="white-text" href="#">Terms & Conditions</a></li>
                                 <li><a class="white-text" href="#">FAQ</a></li>
@@ -331,7 +368,7 @@
                 </div>
 
 
-                <div class="col l4 s12">
+                <div class="col l3 s12">
                     <img src="images/banner.b13358b8.png" alt="">
                 </div>
 
@@ -349,10 +386,12 @@
 
 
     </footer>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider();
+        });
+    </script>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         M.AutoInit();
     </script>
@@ -365,14 +404,14 @@
             var years = $("#years").val();
             console.log(years);
             var annualrate = $("#annualrate").val()
-            console.log(annualrate); 
-  var monthlyrate = annualrate / 12 / 100; //annualrate of interest
-  var months = years * 12;  //Time years 
-  var futureValue = 0; //Final Value
+            console.log(annualrate);
+            var monthlyrate = annualrate / 12 / 100; //annualrate of interest
+            var months = years * 12; //Time years 
+            var futureValue = 0; //Final Value
 
-  futureValue = investment * (Math.pow(1 + monthlyrate, months)-1) / 
-monthlyrate;
-            roundedvalue= futureValue.toFixed(2);
+            futureValue = investment * (Math.pow(1 + monthlyrate, months) - 1) /
+                monthlyrate;
+            roundedvalue = futureValue.toFixed(2);
             console.log('fv: ' + roundedvalue);
             if (isNaN(roundedvalue)) {
                 console.log("nan one");
@@ -405,6 +444,7 @@ monthlyrate;
         }
     </script>
     <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 
 </html>

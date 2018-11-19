@@ -2,6 +2,7 @@ var sidenavinstance;
 
 
 $(document).ready(function () {
+    $('.slider').slider();
     M.AutoInit();
     var sidenav = document.querySelector('.sidenav');
     sidenavinstance = M.Sidenav.init(sidenav);
@@ -15,8 +16,8 @@ $(document).ready(function () {
         loop: true,
         nextStringDelay: [10, 1500]
     });
-
-
+            
+            
 
 });
 
@@ -24,3 +25,4 @@ document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems);
 });
+
