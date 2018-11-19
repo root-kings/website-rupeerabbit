@@ -181,7 +181,8 @@
     <div class="row white" style="padding:40px">
         <h3 class="center strong">Get Your Savings Calculated!!</h3>
         <br>
-        <h5 class="center light">My Initial Deposite Amount is Rs. <input type="text" id="init" required="required" style="width:200px" class="center" /> and Additional Monthly Deposits will be of Rs.<input id="annual" type="text" required="required" style="width:200px" class="center" />  for a Time Period of <input type="text" id="years" required="required" style="width:200px" class="center" /> months
+        <h5 class="center light">My Initial Deposit Ammo
+            unt is Rs. <input type="text" id="init" required="required" style="width:200px" class="center" /> and Additional Monthly Deposits will be of Rs.<input id="annual" type="text" required="required" style="width:200px" class="center" />  for a Time Period of <input type="text" id="years" required="required" style="width:200px" class="center" /> months
             <br>
 
         </h5>
@@ -334,14 +335,14 @@
     </script>
     <script>
         function savings() {
-            var init = parseFloat(document.getElementById('init').value);
-            var amount = parseFloat(document.getElementById('annual').value);
+            var init = document.getElementById('init').value;
+            var amount = document.getElementById('annual').value;
             //var wholeRate = parseFloat(document.getElementById('rate').value);
             var years = document.getElementById('years').value;
 
             //var rate = wholeRate / 100;
-
-            var total = init + years * amount;
+            var mul = years * amount;
+            var total = +init + +mul;
 
             // for (var i = ; i > 1; i--) {
             //     total = total * (1 + rate) + amount;
