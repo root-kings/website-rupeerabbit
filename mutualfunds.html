@@ -79,7 +79,7 @@
 
     <section style="min-height: 85vh;">
         <!-- <div class="container"> -->
-        <div class="row" style="height:100%">
+        <div class="row" style="height:85vh">
             <div class="col s12 m6" style="padding-top: 190px">
                 <i>
                     <img src="https://png.icons8.com/windows/80/00d09c/rupee.png">
@@ -92,13 +92,13 @@
                     INVESTING</a>
 
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m6 valign-wrapper" style="height:80vh">
                 <!-- <img src="images/ON40S30.png" alt="" width="600" style="margin-top: 40px; max-width: 95%"> -->
 
                 <div class="slider white">
                     <ul class="slides">
                         <li class="white">
-                            <img src="images/ON40S30.png" alt="">
+                            <img src="images/ON40S30.png" alt="" style="padding:0px 80px 0px 80px;overflow: visible">
 
                             <!-- <div class="caption center-align">
                             <h3>This is our biglol Tagline!</h3>
@@ -107,7 +107,7 @@
                         </li>
 
                         <li class="white">
-                            <img src="images/one.png" alt="" class="center">
+                            <img src="images/one.png" alt="" class="center" style="padding:0px 80px 0px 80px" height="80vh">
                 </div>
 
                 </li>
@@ -168,12 +168,33 @@
                     <input type="text" id="annualrate" required="required" style="width:200px" class="center" />%,
                     </ul>
                     <br><br>
-                    <div id="result" align="center"></div>
+                    <div id="result" align="center">
+
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th id="title1"> </th>
+                                    <th id="title2"> </th>
+                                    <th id="title3"> </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td id="expectedammount"> </td>
+                                    <td id="ammountinvested"> </td>
+                                    <td id="wealthgain"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
                 </h5>
             </form>
         </div>
         <br>
-        <div id="result" align="center" style="color:#006;margin-top:20px;"></div>
+        <div id="result" align="center" style="color:#006;margin-top:20px;">
+        </div>
         <div class="center">
             <!-- <a class="waves-effect waves-light btn" style="background:linear-gradient(135deg,#8f53d7,#1e83ef);"  
                 onclick="calculatesip()" type="submit">Get it Calculated</a> -->
@@ -405,13 +426,19 @@
             console.log(years);
             var annualrate = $("#annualrate").val()
             console.log(annualrate);
+
             var monthlyrate = annualrate / 12 / 100; //annualrate of interest
             var months = years * 12; //Time years 
             var futureValue = 0; //Final Value
-
+            var totalinvested = 0;
+            wealthgain =0;
+            var totalinvest = investment * 120;
+            totalinvested = totalinvest.toFixed(2);
             futureValue = investment * (Math.pow(1 + monthlyrate, months) - 1) /
                 monthlyrate;
             roundedvalue = futureValue.toFixed(2);
+            wealthgain = roundedvalue - totalinvested;
+            var wealthgained = wealthgain.toFixed(2);
             console.log('fv: ' + roundedvalue);
             if (isNaN(roundedvalue)) {
                 console.log("nan one");
@@ -421,9 +448,19 @@
                 console.log("nan one");
             } else {
                 console.log('no nan one');
-                $("#result").empty();
+                $("#title1").empty();
+                $("#title1").append("Expected Ammount")
+                $("#expectedammount").empty();
                 console.log("no nan one");
-                $("#result").append("Your Maturity Value = " + roundedvalue);
+                $("#expectedammount").append(roundedvalue);
+                $("#title2").empty();
+                $("#title2").append("Ammount Invested")
+                $("#ammountinvested").empty();
+                $("#ammountinvested").append(totalinvested);
+                $("#title3").empty();
+                $("#title3").append("Wealth Gain")
+                $("#wealthgain").empty();
+                $("#wealthgain").append(wealthgained);
             }
         }
 
