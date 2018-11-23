@@ -192,11 +192,10 @@
     <div class="row white" style="padding:40px">
         <h3 class="center strong">Get Your Savings Compared!!</h3>
         <br>
-        <h5 class="center light">My Initial Deposit Ammo
-            unt is Rs. <input type="text" id="init" required="required" style="width:200px" class="center" /> and
+        <h5 class="center light">My Initial Deposit Ammount is Rs. <input type="text" id="init" required="required" style="width:200px" class="center" /> and
             Additional Monthly Deposits will be of Rs.<input id="annual" type="text" required="required" style="width:200px"
                 class="center" /> for a Time Period of <input type="text" id="years" required="required" style="width:200px"
-                class="center" /> months
+                class="center" /> Years
             <br>
 
         </h5>
@@ -365,7 +364,10 @@
             var amount = document.getElementById('annual').value;
             //var wholeRate = parseFloat(document.getElementById('rate').value);
             var years = document.getElementById('years').value;
-
+            var licrate = 8.2;
+            var rabbitrate = 7.6;
+            var axisrate = 7.0;
+            var icicirate = 7.25;
             //var rate = wholeRate / 100;
             var mul = years * amount;
             var total = +init + +mul;
@@ -374,15 +376,20 @@
             //     total = total * (1 + rate) + amount;
             //     total = Math.round(total * 100) / 100;
             // }
+
+            var lic = init * licrate * years;
+            var rupeerabbit = init * rabbitrate * years;
+            var axis = init * axisrate * years;
+            var icici = init * icicirate * years;
             $("#result").empty();
-            $("#result").append("Final Amount = Rs. " + total);
+            $("#result").append("Fixed Deposit Savings!!");
             $("#result1").empty();
             $("#result1").append(
                 '<div class="card"><div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">RupeeRabbit <br> Savings</span></div><div class="card-content"><p class="center"></p></div></div> '
             );
             $("#result2").empty();
             $("#result2").append(
-                '<div class="card"><div class="card-image"><img src="images/over.png" width="600"><span class="card-title">LIC <br> Savings</span></div><div class="card-content"><p class="center"></p></div></div> '
+                '<div class="card"><div class="card-image"><img src="images/over.png" width="600"><span class="card-title">LIC <br> Savings</span></div><div class="card-content"><p class="center">FD Interest : 8.2 % <br> Total Savings:  <span id="totalsavingslic"></span></p></div></div> '
             );
             $("#result3").empty();
             $("#result3").append(
@@ -392,6 +399,8 @@
             $("#result4").append(
                 '<div class="card"><div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">Fixed Deposits <br> Savings</span></div><div class="card-content"><p class="center"></p></div></div> '
             );
+            $("#totalsavingslic").empty();
+            $("#totalsavingslic").append(" " + lic.toFixed(2) + " ");
         }
     </script>
     <script src="js/index.js"></script>
