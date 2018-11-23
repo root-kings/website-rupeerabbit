@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mutual Funds | RupeeRabbit </title>
     <link rel="shortcut icon" type="image/png" href="images/shortcut.png" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -81,7 +84,7 @@
     <section style="min-height: 85vh;">
         <div class="container">
             <div class="row">
-                <div class="col s12 m6" style="padding-top: 90px">
+                <div class="col s12 m5" style="padding-top: 90px">
                     <i>
                         <img src="https://png.icons8.com/windows/80/00d09c/rupee.png">
                     </i>
@@ -93,8 +96,8 @@
                         INVESTING</a>
 
                 </div>
-                <div class="col s12 m6 valign-wrapper" style="height:80vh">
-                    <!-- <img src="images/ON40S30.png" alt="" width="600" style="margin-top: 40px; max-width: 95%"> -->
+                <div class="col s12 m7 valign-wrapper" style="height:80vh">
+                    <!-- <img src="images/ON40S30.png" alt="" width="600" style="margin-top: 40px; max-width: 95%">
 
                     <div class="slider white">
                         <ul class="slides">
@@ -104,7 +107,7 @@
                                 <!-- <div class="caption center-align">
                             <h3>This is our biglol Tagline!</h3>
                             <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                          </div> -->
+                          </div> --
                             </li>
 
                             <li class="white">
@@ -112,7 +115,140 @@
                                     height="80vh">
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
+
+                    <canvas id="myChart" width="400" height="300"></canvas>
+                    <script>
+
+
+
+                        var smh = {
+                        "6.00%": {
+                            "5": 697700,
+                            "10": 1638793,
+                            "20": 4620409,
+                            "25": 6929940,
+                            "30": 10045150
+                        },
+                        "8.00%": {
+                            "5": 734769,
+                            "10": 1829460,
+                            "20": 5890204,
+                            "25": 9510264,
+                            "30": 14903594
+                        },
+                        "8.10%": {
+                            "5": 736687,
+                            "10": 1839702,
+                            "20": 5963942,
+                            "25": 9666281,
+                            "30": 15209659
+                        },
+                        "12.00%": {
+                            "5": 816697,
+                            "10": 2300387,
+                            "20": 9892554,
+                            "25": 18788466,
+                            "30": 34949641
+                        },
+                        "15.00%": {
+                            "5": 885745,
+                            "10": 2752171,
+                            "20": 14972395,
+                            "25": 32435296,
+                            "30": 69232796
+                        }
+                        };
+
+
+		var config = {
+			type: 'line',
+			data: {
+				labels: [5,10,20,25,30],
+				datasets: [{
+					label: '6%',
+					backgroundColor: 'rgba(255, 99, 132, 0.2)',
+					borderColor: 'rgba(255, 99, 132, 1)',
+					data: [
+                    697700,1638793,4620409,6929940,10045150 
+					],
+					fill: false,
+				}, {
+					label: '8%',
+					fill: false,
+					backgroundColor: 'rgba(54, 162, 235, 0.2)',
+					borderColor: 'rgba(54, 162, 235, 1)',
+					data: [
+                    734769,1829460,5890204,9510264,14903594
+					],
+                },
+                {
+					label: '8.10%',
+					fill: false,
+					backgroundColor: 'rgba(255, 159, 64, 0.2)',
+					borderColor: 'rgba(255, 159, 64, 1)',
+					data: [
+                    736687,1839702,5963942,9666281,15209659 
+					],
+                },
+                {
+					label: '12%',
+					fill: false,
+					backgroundColor: 'rgba(75, 192, 192, 0.2)',
+					borderColor: 'rgba(75, 192, 192, 1)',
+					data: [
+                    816697,2300387,9892554,18788466,34949641
+					],
+                },
+                {
+					label: '15%',
+					fill: false,
+					backgroundColor: 'rgba(255, 205, 86, 0.2)',
+					borderColor: 'rgba(255, 205, 86, 1)',
+					data: [
+                    885745,2752171,14972395,32435296,69232796 
+					],
+				}]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'EXPECTED END VALUE OF YOUR MONTHLY INVESTMENT OF RS 10000'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('myChart').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+
+                    </script>
                 </div>
 
 
@@ -389,11 +525,7 @@
                     by Root-Kings </a>
             </div>
     </footer>
-    <script>
-        $(document).ready(function () {
-            $('.slider').slider();
-        });
-    </script>
+
 
     <script>
         M.AutoInit();
@@ -463,7 +595,6 @@
         }
     </script>
     <script src="js/index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 
 </html>
