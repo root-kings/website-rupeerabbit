@@ -2,15 +2,11 @@ var sidenavinstance;
 
 
 $(document).ready(function () {
-    $('.slider').slider();
+   
     M.AutoInit();
     var sidenav = document.querySelector('.sidenav');
     sidenavinstance = M.Sidenav.init(sidenav);
     //AOS.init();
-
-   
-            
-            
 
 });
 
