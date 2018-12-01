@@ -331,10 +331,10 @@
 
                     function updatedata() {
                         var investment = $("#investinput").val();
-                        $("#rupeerabbit").html((investment*10/100*25).toFixed(2));
-                        $("#gold").html((investment*5.5/100*25).toFixed(2));
-                        $("#axis").html((investment*7/100*25).toFixed(2));
-                        $("#icici").html((investment*7.25/100*25).toFixed(2));
+                        $("#rupeerabbit").html((investment*25 + investment*10/100*25).toFixed(2));
+                        $("#gold").html((investment*25 + investment*5.5/100*25).toFixed(2));
+                        $("#axis").html((investment*25 + investment*7/100*25).toFixed(2));
+                        $("#icici").html((investment*25 + investment*7.25/100*25).toFixed(2));
                     }
 
                     $(document).ready(function () {
