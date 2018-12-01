@@ -131,8 +131,14 @@
 
     <div class="parallax-container" style="min-height:95vh">
 
-        <div class="parallax">
-            <img src="images/GRAPH.png" alt="" class="right">
+        <div class="parallax show-on-large hide-on-med-and-down">
+            <img src="images/GRAPH.png" alt="" >  
+        </div>
+        <div class="parallax show-on-medium hide-on-large">
+            <img src="images/GRAPH-medium.png" alt="">
+        </div>
+        <div class="parallax show-on-small hide-on-med-and-up">
+            <img src="images/GRAPH-small.png" alt="" >
         </div>
 
 
@@ -151,13 +157,14 @@
 
         <script>
             new TypeIt('#example1', {
-        strings: ["Online Investment", "New Home Savings", "Dream Vacation", "College Fund", "Retirement Prosperity", "Wealth Planning"],
-        speed: 100,
-        breakLines: false,
-        autoStart: false,
-        loop: true,
-        nextStringDelay: [10, 1500]
-    });</script>
+            strings: ["Online Investment", "New Home Savings", "Dream Vacation", "College Fund", "Retirement Prosperity", "Wealth Planning"],
+            speed: 100,
+            breakLines: false,
+            autoStart: false,
+            loop: true,
+            nextStringDelay: [10, 1500]
+            });
+        </script>
 
 
 
