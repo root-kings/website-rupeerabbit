@@ -25,7 +25,35 @@
         font-family: 'Abril Fatface', cursive;
     }
 
-</style>
+     .card.tiny {
+            height: 15vh;
+        }
+
+        .calcval {
+            font-size: 1.5em;
+            font-weight: 500;
+            /* color: #0000FF; */
+        }
+
+        .investtype {
+            /* color: blueviolet; */
+            line-height: 25%;
+        }
+
+        .investrate {
+            font-size: 0.75em;
+            color: rgb(92, 92, 92)
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+    </style>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 </head>
 
 <body>
@@ -192,64 +220,143 @@
         </div>
     </div>
 
-    <div class="row white" style="padding:40px">
-        <h3 class="center strong">Get Your Savings Compared!!</h3>
-        <br>
-        <h5 class="center light">My Initial Deposit Ammount is Rs. <input type="text" id="init" required="required"
-                style="width:200px" class="center" /> and
-            Additional Monthly Deposits will be of Rs.<input id="annual" type="text" required="required" style="width:200px"
-                class="center" /> for a Time Period of <input type="text" id="years" required="required" style="width:200px"
-                class="center" /> Years
-            <br>
+    <div class="row white" style="padding:30px">
 
-        </h5>
-        <br>
-        <div class="center">
-            <a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
-                onclick="savings()">Get My Savings</a>
-            <br>
 
-            <!-- <h5> -->
-                <div>
-                    <div id="result" class="center-align" style="padding:30px"></div>
-                    <div class="col s12 m3" id="result1">
-                        <!-- <div class="card">
-                            <div class="card-image">
-                                <img src="images/auto.png" width="600">
-                                <span class="card-title">Automatic <br> Savings</span>
+        <div class="col s12 m8 push-m4 l6 push-l3 valign-wrapper" style="min-height:80vh">
+
+
+            <div style="width:100%">
+
+
+                <h3 class="center">Let's compare popular options. You decide.</h3>
+
+                <div class="row">
+                    <p class="center">MONTHLY INVESTMENT OF</p>
+                    <div class="input-field col s6 push-s3 m4 push-m4">
+                        <input value="50000" id="investinput" type="text" class="validate" max="99000" min="5000">
+                        <label for="investinput">Rupees</label>
+                    </div>
+
+
+                    <p class="range-field col s10 push-s1 center">
+                        
+                        <input type="range" id="investrange" min="5000" max="99000" value="50000" />
+                    </p>
+                
+                    <p class="row col s12 center">FOR A PERIOD OF 25 YRS WOULD HAVE ACCUMULATED TO</p>
+                    <div class="col s3">
+                        <div class="card blue valign-wrapper hoverable" style="transform: scale(1.1,1.1)">
+                            <div class="full-width">
+                                <p class="center">
+                                    <span id="rupeerabbit" class="calcval white-text"></span>
+                                </p>
+                                <p class="investtype purple-text text-darken-4 center">
+                                    RupeeRabbit
+                                </p>
+                                <p class="investrate center">
+                                    @ 10.00% p.a.
+                                </p>
                             </div>
-                            <div class="card-content">
-                                <p class="center">RupeeRabbit analyzes your income and spending every day and sets aside small amounts of money you can safely save.</p>
+                        </div>
+                    </div>
+                    <div class="col s3">
+                        <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
+                            <div class="full-width">
+                                <p class="center">
+                                    <span id="gold" class="calcval blue-text"></span>
+                                </p>
+                                <p class="investtype purple-text center">
+                                    Gold
+                                </p>
+                                <p class="investrate center">
+                                    @ 5.50% p.a.
+                                </p>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
-                    <div class="col s12 m3" id="result2">
-
+                    <div class="col s3">
+                        <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
+                            <div class="full-width">
+                                <p class="center">
+                                    <span id="axis" class="calcval blue-text"></span>
+                                </p>
+                                <p class="investtype purple-text center">
+                                    Axis Bank
+                                </p>
+                                <p class="investrate center">
+                                    @ 7.00% p.a.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col s12 m3" id="result3">
-
-                    </div>
-                    <div class="col s12 m3" id="result4">
-
+                    <div class="col s3">
+                        <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
+                            <div class="full-width">
+                                <p class="center">
+                                    <span id="icici" class="calcval blue-text"></span>
+                                </p>
+                                <p class="investtype purple-text center">
+                                    ICICI Bank
+                                </p>
+                                <p class="investrate center">
+                                    @ 7.25% p.a.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            <!-- </h5> -->
+
+
+
+                <script>
+                    $("#investrange").change(function () {
+                        // console.log($("#investrange").val());
+                        $("#investinput").val($("#investrange").val());
+                        M.updateTextFields();
+                        updatedata();
+                    });
+
+                    $("#investinput").change(function () {
+                        // console.log($("#investinput").val());
+                        $("#investrange").val($("#investinput").val());
+                        M.updateTextFields();
+                        updatedata();
+                    });
+
+
+                    function updatedata() {
+                        var investment = $("#investinput").val();
+                        $("#rupeerabbit").html((investment*10/100*25).toFixed(2));
+                        $("#gold").html((investment*5.5/100*25).toFixed(2));
+                        $("#axis").html((investment*7/100*25).toFixed(2));
+                        $("#icici").html((investment*7.25/100*25).toFixed(2));
+                    }
+
+                    $(document).ready(function () {
+                        updatedata();
+                    });
+                </script>
+
+            </div>
+
         </div>
+
     </div>
 
-
     <div style="background: linear-gradient(135deg,#8f53d7,#1e83ef);" class="white-text">
-        <div class="row" style="padding: 10%;padding-bottom: 90px">
+        <div class="row" style="padding-bottom: 90px; padding-top:30px;">
             <h4 class="center strong white-text" style="font-weight: 900;font-size: 45px;"><br> Get Relaxed!!</h4>
-            <p class="center" style="font-weight: 600">Empowering people to make smart financial decisions.</p>
+            <p class="center" style="font-size: 1.25em;">Empowering people to make smart financial decisions.</p>
 
             <div class="container" style="padding: 0%">
                 <div class="col s12 m6">
-                    <div class="card white z-depth-5 small">
+                    <div class="card white z-depth-5 small hoverable">
                         <div class="card-content black-text">
                             <span class="card-title center abril truncate" style="padding: 10%;font-size: 50px">Taxes</span>
                             <div class="container">
-                                <p class="center">Need help understanding your taxes? Our Agents are best in the world
+                                <p class="center">Need help understanding your taxes? Our Agents are best in the
+                                    world
                                     to help you find the tax information you need.</p>
                             </div>
                         </div>
@@ -257,7 +364,7 @@
                 </div>
 
                 <div class="col s12 m6">
-                    <div class="card white z-depth-5 small">
+                    <div class="card white z-depth-5 small  hoverable">
                         <div class="card-content black-text">
                             <span class="card-title center abril truncate" style="padding: 10%;font-size: 50px">Security</span>
                             <div class="container">
@@ -315,7 +422,8 @@
 
                         <div class="col s12 l4">
                             <h5 class="white-text" style="margin-left:20px">Principle Office:-</h5>
-                            <p class="grey-text text-lighten-4" style="margin-left:20px">4th floor B.B Tower,<br> next
+                            <p class="grey-text text-lighten-4" style="margin-left:20px">4th floor B.B Tower,<br>
+                                next
                                 to Sai vatika Lawn <br>near Equitas Small Finance Bank <br>Shankar Nagar - Nagpur</p>
                         </div>
 
@@ -344,9 +452,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col l3 s12">
-                    <img src="images/lock1.png" alt="" width="350">
-                </div>
+
             </div>
             <div class="footer-copyright">
                 <a href="http://rupeerabbit.com" target="_blank" class="white-text" style="padding-left: 20px; padding-right:20px;">&copy;
@@ -358,59 +464,10 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         M.AutoInit();
     </script>
-    <script>
-        function savings() {
-            var init = document.getElementById('init').value;
-            var amount = document.getElementById('annual').value;
-            //var wholeRate = parseFloat(document.getElementById('rate').value);
-            var years = document.getElementById('years').value;
-            var licrate = 8.2;
-            var rabbitrate = 7.6;
-            var axisrate = 7.0;
-            var icicirate = 7.25;
-            //var rate = wholeRate / 100;
-            var mul = years * amount;
-            var total = +init + +mul;
 
-            // for (var i = ; i > 1; i--) {
-            //     total = total * (1 + rate) + amount;
-            //     total = Math.round(total * 100) / 100;
-            // }
-
-            var lic = init * licrate * years;
-            var rupeerabbit = init * rabbitrate * years;
-            var axis = init * axisrate * years;
-            var icici = init * icicirate * years;
-            $("#result").empty();
-            $("#result").append("Fixed Deposit Savings!!");
-            $("#result1").empty();
-            $("#result1").append(
-                '<div class="card"><div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">RupeeRabbit <br> Savings</span></div><div class="card-content"><p class="center">FD Interest : 7.6 % <br> Total Savings:  <span id="totalsavingsrr"></span></p></div></div> '
-            );
-            $("#result2").empty();
-            $("#result2").append(
-                '<div class="card"><div class="card-image"><img src="images/over.png" width="600"><span class="card-title">LIC <br> Savings</span></div><div class="card-content"><p class="center">FD Interest : 8.2 % <br> Total Savings:  <span id="totalsavingslic"></span></p></div></div> '
-            );
-            $("#result3").empty();
-            $("#result3").append(
-                '<div class="card"><div class="card-image"><img src="images/smart.png" width="600"><span class="card-title">Axis Bank <br> Savings</span></div><div class="card-content"><p class="center">FD Interest : 7.0 % <br> Total Savings:  <span id="totalsavingsaxis"></span></p></div></div> '
-            );
-            $("#result4").empty();
-            $("#result4").append(
-                '<div class="card"><div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">ICICI Bank <br> Savings</span></div><div class="card-content"><p class="center">FD Interest : 8.2 % <br> Total Savings:  <span id="totalsavingsicici"></span></p></div></div> '
-            );
-            $("#totalsavingslic").empty();
-            $("#totalsavingslic").append(" " + lic.toFixed(2) + " ");
-            $("#totalsavingsaxis").empty();
-            $("#totalsavingsaxis").append(" " + axis.toFixed(2) + " ");
-            $("#totalsavingsicici").empty();
-            $("#totalsavingsicici").append(" " + icici.toFixed(2) + " ");
-        }
-    </script>
     <script src="js/index.js"></script>
 </body>
 
