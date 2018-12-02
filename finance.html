@@ -69,12 +69,14 @@
                         <a class="brand-logo" href="index.html"><img src="images/logo-rupeerabbit.svg" width="45" /></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
 
-                            <li><a class="waves-effect waves-light btn white hoverable black-text" style="border: 1px solid blue "
-                                    href="tel:+91 7385203397">+91 73852 03397 <i class="material-icons left blue-text text-darken-2">call</i></a></li>
+                            
                             <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
 
                             <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
                                     href="login.html">LOGIN</a></li>
+
+                                    <li><a class="waves-effect waves-light btn white hoverable black-text" style="border: 1px solid blue "
+                                        href="tel:+91 7385203397">+91 73852 03397 <i class="material-icons left blue-text text-darken-2">call</i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -231,30 +233,55 @@
     <div class="row white" style="padding:30px">
 
 
-        <div class="col s12 m8 push-m4 l6 push-l3 valign-wrapper" style="min-height:80vh">
+        <div class="col s12 m12" style="min-height:80vh">
 
 
-            <div style="width:100%">
+            <div>
 
 
                 <h3 class="center">Let's compare popular options. You decide.</h3>
 
                 <div class="row">
                     <p class="center">MONTHLY INVESTMENT OF</p>
-                    <div class="input-field col s6 push-s3 m4 push-m4">
-                        <input value="50000" id="investinput" type="text" class="validate" max="99000" min="5000">
-                        <label for="investinput">Rupees</label>
+                    <div class="container">
+                        <div class="col s12 l2">
+
+                        </div>
+                        <div class="col s12 l8">
+                            <div class="input-field col s6" style="margin-left:20%">
+                                <input value="50000" id="investinput" type="text" class="validate" max="99000" min="5000">
+                                <label for="investinput">Rupees</label>
+                            </div>
+                        </div>
+                        <div class="col s12 l2">
+
+                        </div>
                     </div>
 
 
-                    <p class="range-field col s10 push-s1 center">
+                    <p class="range-field col s10 center">
 
-                        <input type="range" id="investrange" min="5000" max="99000" value="50000" />
+                        <div class="col s12 l4">
+
+                        </div>
+                        <div class="col s12 l4">
+                            <input type="range" id="investrange" min="5000" max="99000" value="50000" style="height:20px" />
+                        </div>
+                        <div class="col s12 l4">
+
+                        </div>
                     </p>
 
                     <p class="row col s12 center">FOR A PERIOD OF 25 YRS WOULD HAVE ACCUMULATED TO</p>
-                    <div class="col s3">
-                        <div class="card blue valign-wrapper hoverable" style="transform: scale(1.1,1.1)">
+                    <div class="col s12 l3">
+                        <div class="card">
+                            <div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">RupeeRabbit
+                                    <br> Savings</span></div>
+                            <div class="card-content">
+                                <p class="center">FD Interest : 10.00% p.a. <br> Total Savings: <span  id="rupeerabbit"></span></p>
+                            </div>
+                        </div>
+                        <!-- <div class="card blue valign-wrapper hoverable" style="transform: scale(1.1,1.1)">
                             <div class="full-width">
                                 <p class="center">
                                     <span id="rupeerabbit" class="calcval white-text"></span>
@@ -266,10 +293,18 @@
                                     @ 10.00% p.a.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="col s3">
-                        <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
+                    <div class="col s12 l3">
+                        <div class="card">
+                            <div class="card-image"><img src="images/over.png" width="600"><span class="card-title">Gold
+                                    <br> Savings</span></div>
+                            <div class="card-content">
+                                <p class="center">FD Interest : 5.5% p.a. <br> Total Savings: <span id="gold"></span></p>
+                            </div>
+                        </div>
+
+                        <!-- <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
                             <div class="full-width">
                                 <p class="center">
                                     <span id="gold" class="calcval blue-text"></span>
@@ -281,10 +316,17 @@
                                     @ 5.50% p.a.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="col s3">
-                        <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
+                    <div class="col s12 l3">
+                        <div class="card">
+                            <div class="card-image"><img src="images/smart.png" width="600"><span class="card-title">Axis Bank
+                                    <br> Savings</span></div>
+                            <div class="card-content">
+                                <p class="center">FD Interest : @ 7.6% p.a. <br> Total Savings: <span id="axis" ></span></p>
+                            </div>
+                        </div>
+                        <!-- <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
                             <div class="full-width">
                                 <p class="center">
                                     <span id="axis" class="calcval blue-text"></span>
@@ -296,10 +338,17 @@
                                     @ 7.00% p.a.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="col s3">
-                        <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
+                    <div class="col s12 l3">
+                        <div class="card">
+                            <div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">ICICI Bank
+                                    <br> Savings</span></div>
+                            <div class="card-content">
+                                <p class="center">FD Interest : 7.25% p.a. <br> Total Savings: <span id="icici"></span></p>
+                            </div>
+                        </div>
+                        <!-- <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
                             <div class="full-width">
                                 <p class="center">
                                     <span id="icici" class="calcval blue-text"></span>
@@ -311,7 +360,7 @@
                                     @ 7.25% p.a.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
