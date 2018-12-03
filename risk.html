@@ -72,14 +72,14 @@
                         <a class="brand-logo" href="index.html"><img src="images/logo-rupeerabbit.svg" width="45" /></a>
                         <ul class="right hide-on-med-and-down" id="nav-mobile">
 
-                            
+
                             <li><a class="waves-effect waves-light btn white black-text hoverable" style="border: 1px solid blue ">REGISTER</a></li>
 
                             <li><a class="waves-effect waves-light btn hoverable" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);"
                                     href="login.html">LOGIN</a></li>
 
-                                    <li><a class="waves-effect waves-light btn white hoverable black-text" style="border: 1px solid blue "
-                                        href="tel:+91 7385203397">+91 73852 03397 <i class="material-icons left blue-text text-darken-2">call</i></a></li>
+                            <li><a class="waves-effect waves-light btn white hoverable black-text" style="border: 1px solid blue "
+                                    href="tel:+91 7385203397">+91 73852 03397 <i class="material-icons left blue-text text-darken-2">call</i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
 
 
 
-                <div class="row valign-wrapper">
+                <div class="row">
                     <div class="col s12 l5">
                         <br><br>
                         <img src="images/aboutyou.jpg" alt="" class="circle responsive-img">
@@ -191,7 +191,7 @@
                         </div>
                         <br>
                         <div>
-                            
+
                             <div class="col s12 l5">
                                 <h5 class="center light">
                                     Email:
@@ -205,33 +205,17 @@
                 </div>
 
 
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <form action="https://sahilkindarle.000webhostapp.com/add.php" method="POST">
+                <br><br>
+                <h3 class="center strong" style="color:#efc051">Let's Create Your <br> Financial Portfolio <br></h3>
                 <div class="row">
-                    <div>
-                        <div class="col s12 l4">
+
+                    <div class="col s12 l6">
+                        <div class="col s12 l6">
                             <h5 class="center light">
-                                Monthly Income
+                                Monthly Income:
                             </h5>
                         </div>
-                        <div class="container">
+                        <div class="col s12 l6 black-text">
                             <select class="monthly" name="monthly">
                                 <option value="" disabled selected>Choose your option</option>
                                 <option value="1">Less than 10,000</option>
@@ -242,63 +226,112 @@
                                 <option value="6">100,000 to 200,000</option>
                                 <option value="7">Above 200,000</option>
                             </select>
-                            <div class="col s12 l4">
-                                <h5 class="center light">
-                                    My Income type
-                                </h5>
-                            </div>
-                            <div class="col s12 l4" style="color: white;">
-                                <select class="input-field center white-text" name="incometype">
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Business</option>
-                                    <option value="2">Salary</option>
-                                </select>
-                            </div>
                         </div>
-                        <br><br><br>
-                        <div class="col s12 l4">
-
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="col s12 l6">
                             <h5 class="center light">
-                                No. of Dependant Family members
+                                Income Type:
                             </h5>
                         </div>
-
-                        <div class="col s12 l2">
+                        <div class="col s12 l6 black-text">
+                            <select class="monthly" name="monthly">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Less than 10,000</option>
+                                <option value="2">10,000 to 25,000</option>
+                                <option value="3">26,000 to 50,000</option>
+                                <option value="4">51,000 to 75,000</option>
+                                <option value="5">75,000 to 100,000</option>
+                                <option value="6">100,000 to 200,000</option>
+                                <option value="7">Above 200,000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="col s12 l8">
+                            <h5 class="center light">
+                                Number of Family Members Dependent:
+                            </h5>
+                        </div>
+                        <div class="col s12 l4">
                             <select class="input-field center" name="familypersons">
                                 <option value="" disabled selected>Choose your option</option>
-                                <option value="1"> 0</option>
-                                <option value="2"> 1</option>
-                                <option value="3"> 2</option>
-                                <option value="3"> 3</option>
-                                <option value="3"> 4</option>
-                                <option value="3"> 5</option>
-                                <option value="3"> 6</option>
-                                <option value="3"> 7</option>
-                                <option value="3"> 8</option>
-                                <option value="3"> 9</option>
+                                <option value="1"> 0 - 2</option>
+                                <option value="2"> 3 - 5</option>
+                                <option value="3"> 6 - 9</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="col s12 l6">
                         <div class="col s12 l4">
-
                             <h5 class="center light">
-                                Holding Monthly Savings of
+                                Expenses:
                             </h5>
                         </div>
                         <div class="col s12 l2">
-                            <select class="input-field center" style="width: 200px;" name="monthlysavings">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Rent</span>
+                                </label>
+                            </p>
                         </div>
-                        <br><br><br>
-                        <div class="col s12 l3 center">
+                        <div class="col s12 l2">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Emi</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s12 l2">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Bills</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s12 l2">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Other</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+
+                    
+                    </div>
+
+                    <div class="row">
+
+                    <div class="col s12 l5">
+                        <div class="col s12 l8">
                             <h5 class="center light">
-                                Do you have fund for emergency
+                                Monthly Savings:
                             </h5>
                         </div>
-                        <div class="col s12 l3 center">
+                        <div class="col s12 l4">
+                            <select class="input-field center" style="width: 200px;" name="monthlysavings">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">  < 5%</option>
+                                <option value="2"> 6% - 20% </option>
+                                <option value="3"> 20% - 35%</option>
+                                <option value="3"> 35% - 70%</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col s12 l7">
+                        <div class="col s12 l6">
+                            <h5 class="center light">
+                                Do You Have Emergency Fund:
+                            </h5>
+                        </div>
+                        <div class="col s12 l6">
                             <select class="input-field center" style="width: 200px;" name="emergencyfunds">
                                 <option value="" disabled selected>Choose your option</option>
                                 <option value="1">Yes</option>
@@ -306,73 +339,177 @@
                                 <option value="3">I have Insurance</option>
                             </select>
                         </div>
-                        <div class="col s12 l2">
+                    </div>
+                </div>
 
-                        </div>
-                        <div class="col s12 l4">
-                            <h5 class="center light">Do You have Investments </h5>
-                        </div>
-                        <div class="col s12 l2">
-                            <select class="country">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="Yes" id="yesfunds">Yes</option>
-                                <option value="No" id="nofunds">No</option>
-                            </select>
-                        </div>
-                        <div class="col s12 l4">
-                            <h5 class="center light">
-                                <div>
-                                    <select name="fundspanel" id="fundspanel" class="fundspanel">
-                                        <option value="Yes">lol</option>
-                                        <option value="Yes">lol1</option>
-                                        <option value="Yes">lol2</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <form action="https://sahilkindarle.000webhostapp.com/add.php" method="POST">
+                    <div class="row">
+                        <div>
+                            <div class="col s12 l4">
+                                <h5 class="center light">
+                                    Monthly Income
+                                </h5>
+                            </div>
+                            <div class="container">
+                                <select class="monthly" name="monthly">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Less than 10,000</option>
+                                    <option value="2">10,000 to 25,000</option>
+                                    <option value="3">26,000 to 50,000</option>
+                                    <option value="4">51,000 to 75,000</option>
+                                    <option value="5">75,000 to 100,000</option>
+                                    <option value="6">100,000 to 200,000</option>
+                                    <option value="7">Above 200,000</option>
+                                </select>
+                                <div class="col s12 l4">
+                                    <h5 class="center light">
+                                        My Income type
+                                    </h5>
+                                </div>
+                                <div class="col s12 l4" style="color: white;">
+                                    <select class="input-field center white-text" name="incometype">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">Business</option>
+                                        <option value="2">Salary</option>
                                     </select>
                                 </div>
-                            </h5>
-                        </div>
-                        <div class="col s12 l2"></div>
+                            </div>
+                            <br><br><br>
+                            <div class="col s12 l4">
 
+                                <h5 class="center light">
+                                    No. of Dependant Family members
+                                </h5>
+                            </div>
+
+                            <div class="col s12 l2">
+                                <select class="input-field center" name="familypersons">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1"> 0</option>
+                                    <option value="2"> 1</option>
+                                    <option value="3"> 2</option>
+                                    <option value="3"> 3</option>
+                                    <option value="3"> 4</option>
+                                    <option value="3"> 5</option>
+                                    <option value="3"> 6</option>
+                                    <option value="3"> 7</option>
+                                    <option value="3"> 8</option>
+                                    <option value="3"> 9</option>
+                                </select>
+                            </div>
+                            <div class="col s12 l4">
+
+                                <h5 class="center light">
+                                    Holding Monthly Savings of
+                                </h5>
+                            </div>
+                            <div class="col s12 l2">
+                                <select class="input-field center" style="width: 200px;" name="monthlysavings">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            <br><br><br>
+                            <div class="col s12 l3 center">
+                                <h5 class="center light">
+                                    Do you have fund for emergency
+                                </h5>
+                            </div>
+                            <div class="col s12 l3 center">
+                                <select class="input-field center" style="width: 200px;" name="emergencyfunds">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                    <option value="3">I have Insurance</option>
+                                </select>
+                            </div>
+                            <div class="col s12 l2">
+
+                            </div>
+                            <div class="col s12 l4">
+                                <h5 class="center light">Do You have Investments </h5>
+                            </div>
+                            <div class="col s12 l2">
+                                <select class="country">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="Yes" id="yesfunds">Yes</option>
+                                    <option value="No" id="nofunds">No</option>
+                                </select>
+                            </div>
+                            <div class="col s12 l4">
+                                <h5 class="center light">
+                                    <div>
+                                        <select name="fundspanel" id="fundspanel" class="fundspanel">
+                                            <option value="Yes">lol</option>
+                                            <option value="Yes">lol1</option>
+                                            <option value="Yes">lol2</option>
+                                        </select>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s12 l2"></div>
+
+                        </div>
                     </div>
-                </div>
-                <div style="padding-top: 50px">
-                    <h3 class="center strong">Let's Set Your Goals!</h3>
-                    <div class="row">
-                        <div class="col s12 l6">
-                            <h5 class="center light">
-                                Set Your Tenure of Investment planning
-                            </h5>
-                        </div>
-                        <div class="col s12 l4">
-                            <select class="tenure">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="Three">Short term - upto 3 years </option>
-                                <option value="seven">Medium term - 3 to 7 years </option>
-                                <option value="fiveplus">Long term - More than 5 years </option>
-                            </select>
-                        </div>
-                        <div class="col s12 l2">
+                    <div style="padding-top: 50px">
+                        <h3 class="center strong">Let's Set Your Goals!</h3>
+                        <div class="row">
+                            <div class="col s12 l6">
+                                <h5 class="center light">
+                                    Set Your Tenure of Investment planning
+                                </h5>
+                            </div>
+                            <div class="col s12 l4">
+                                <select class="tenure">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="Three">Short term - upto 3 years </option>
+                                    <option value="seven">Medium term - 3 to 7 years </option>
+                                    <option value="fiveplus">Long term - More than 5 years </option>
+                                </select>
+                            </div>
+                            <div class="col s12 l2">
 
-                        </div>
-                        <div class="col s12 l4">
+                            </div>
+                            <div class="col s12 l4">
 
-                        </div>
-                        <div class="col s12 l4">
-                            <h5 class="center light">
-                                <div id="termgoals">
+                            </div>
+                            <div class="col s12 l4">
+                                <h5 class="center light">
+                                    <div id="termgoals">
 
-                                </div>
-                            </h5>
-                        </div>
-                        <div class="col s12 l4">
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s12 l4">
 
+                            </div>
                         </div>
+
+
+
+                        <button class="btn waves-effect waves-light" type="submit">Submit</button>
                     </div>
-
-
-
-                    <button class="btn waves-effect waves-light" type="submit">Submit</button>
-                </div>
-            </form>
+                </form>
     </section>
 
 
