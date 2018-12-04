@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Slider</title>
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+	<style>
+		.carousel {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+		}
+
+		.carousel-item {
+			flex: 1 0 auto;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.carousel-content {
+			flex: 1 0 auto;
+			max-height: 85vh;
+		}
+
+		.carousel-content img {
+			width: 100vw;
+			padding-top: 5vh;
+		}
+
+		.carousel-footer {
+			border-top: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		.strong {
+			font-weight: 600;
+		}
+
+		/* Background Colors */
+		.rupeerabbit-blue {
+			background: linear-gradient(135deg, #8f53d7, #1e83ef);
+		}
+
+		.rupeerabbit-green {
+			background: linear-gradient(135deg, #00d09c, #00aa80);
+		}
+
+		.rupeerabbit-gold {
+			background: linear-gradient(135deg, #f3bd40, #efc051);
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+
+	<div id="intro" class="carousel carousel-slider center">
+
+		<div class="carousel-item rupeerabbit-gold white-text" href="#one!">
+			<div class="carousel-content">
+
+				<img src="salary.png" alt="" class="center">
+
+				<h2 class="light">How much is your monthly salary?</h2>
+				<div class="row">
+					<div class="input-field col s4 push-s4">
+						<input placeholder="Enter amount" class="white-text" id="salary" type="number">
+					</div>
+				</div>
+
+			</div>
+			<div class="carousel-footer">
+				<a href="javascript:instance.next()" class="btn-flat right white-text waves-effect waves-light">Next
+					<i class="material-icons right">chevron_right</i>
+				</a>
+			</div>
+
+		</div>
+		<div class="carousel-item rupeerabbit-green white-text" href="#two!">
+			<div class="carousel-content">
+				<img src="bank.png" alt="" class="center">
+
+				<h2 class="light">How much is your present bank balance?</h2>
+				<div class="row">
+					<div class="input-field col s4 push-s4">
+						<input placeholder="Enter amount" class="white-text" id="bank" type="number">
+					</div>
+				</div>
+
+			</div>
+			<div class="carousel-footer">
+				<a href="javascript:instance.prev()" class="btn-flat left white-text waves-effect waves-light">Back
+					<i class="material-icons left">chevron_left</i>
+				</a>
+				<a href="javascript:instance.next()" class="btn-flat right white-text waves-effect waves-light">Next
+					<i class="material-icons right">chevron_right</i>
+				</a>
+			</div>
+		</div>
+		<div class="carousel-item rupeerabbit-blue white-text" href="#three!">
+			<div class="carousel-content">
+				<img src="savings.png" alt="" class="center">
+
+				<h2 class="light">How much do you plan to save in the next month?</h2>
+				<div class="row">
+					<div class="input-field col s4 push-s4">
+						<input placeholder="Enter amount" class="white-text" id="savings" type="number">
+					</div>
+				</div>
+
+			</div>
+			<div class="carousel-footer">
+				<a href="javascript:instance.prev()" class="btn-flat left white-text waves-effect waves-light">Back
+					<i class="material-icons left">chevron_left</i>
+				</a>
+				<a href="#" class="btn-flat right white-text waves-effect waves-light strong">Start
+					<i class="material-icons right">chevron_right</i>
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		$('.carousel.carousel-slider').carousel({
+			fullWidth: true,
+			indicators: true
+		});
+
+		var instance = M.Carousel.getInstance(document.getElementById("intro"));
+	</script>
+
+</body>
