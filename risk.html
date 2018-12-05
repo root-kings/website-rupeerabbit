@@ -158,53 +158,38 @@
                     <div class="row">
 
                         <div class="input-field col s6">
-                            <input id="name" type="text" class="validate">
+                            <input id="name" type="text" class="validate" name="name">
                             <label for="name">Name</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" class="validate" name="email">
                             <label for="email">Email</label>
                         </div>
 
 
 
                         <div class="input-field col s6">
-
-
-                            <select>
-                                <option value="0" class="disabled">Select One</option>
-                                <option value="1">Tier 1</option>
-                                <option value="2">Tier 2</option>
-                                <option value="3">Tier 3</option>
-                            </select>
-                            <label>City</label>
+                            <input id="city" type="text" class="validate" name="city">
+                            <label for="city">City</label>
                         </div>
 
                     </div>
                     <div class="row">
 
                         <div class="input-field col s6">
-                            <select>
-                                <option value="0" class="disabled">Select One</option>
-                                <option value="1">18 - 25</option>
-                                <option value="2">25 - 30</option>
-                                <option value="3">30 - 44</option>
-                                <option value="3">45 - 60</option>
-
-                            </select>
-                            <label>Age</label>
+                            <input id="name" type="number" class="validate" name="age">
+                            <label for="age">Age</label>
                         </div>
 
 
                         <div class="input-field col s6">
-                            <select>
-                                <option value="0" class="disabled">Select One</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                                <option value="3">Other</option>
+                            <select name="gender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
                             </select>
                             <label>Gender</label>
                         </div>
@@ -227,21 +212,20 @@
 
                     <div class="row">
                         <div class="input-field col s6">
-                            <select>
+                            <select name="income">
                                 <option value="1">less than 10,000</option>
                                 <option value="2">10,000 to 25,000</option>
                                 <option value="3">25,000 to 50,000</option>
                                 <option value="4">50,000 to 75,000</option>
                                 <option value="5">75,000 to 100,000</option>
                                 <option value="6">100,000 to 200,000</option>
-                                <option value="3">more than 200,000</option>
+                                <option value="7">more than 200,000</option>
                             </select>
                             <label>Monthly Income</label>
                         </div>
 
                         <div class="input-field col s6">
-                            <select>
-                                <option value="0">Select One</option>
+                            <select name="incomeType">
                                 <option value="1">Business</option>
                                 <option value="2">Salary</option>
 
@@ -270,19 +254,19 @@
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" checked="checked" />
+                                    <input type="checkbox" class="filled-in" checked="checked" name="expenses" value="rents"/>
                                     <span>Rents</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="expenses" value="bills" />
                                     <span>Bills</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="expenses" value="emi" />
                                     <span>EMI</span>
                                 </label>
                             </p>
@@ -292,19 +276,19 @@
                             <p>Do you have funds for emergency?</p>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="group1" type="radio" checked />
+                                    <input class="with-gap" name="emergency" value="yes" type="radio" checked />
                                     <span>Yes</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="group1" type="radio" />
+                                    <input class="with-gap" name="emergency" value="no" type="radio" />
                                     <span>No</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="group1" type="radio" />
+                                    <input class="with-gap" name="emergency" value="insurance" type="radio" />
                                     <span>Insurance</span>
                                 </label>
                             </p>
@@ -316,7 +300,7 @@
 
 
                         <div class="input-field col s6">
-                            <select>
+                            <select name="savings">
                                 <option value="1">less than 5%</option>
                                 <option value="2">5% to 15%</option>
                                 <option value="3">15% to 25%</option>
@@ -332,32 +316,32 @@
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name='investments' value="Mutual Funds"/>
                                     <span>Mutual Funds</span>
                                 </label>
                             </p>
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name='investments' value="Fixed Deposit"/>
                                     <span>Fixed Deposit</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name='investments' value="Land"/>
                                     <span>Land</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name='investments' value="Shares"/>
                                     <span>Shares</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name='investments' value="Bond"/>
                                     <span>Bond</span>
                                 </label>
                             </p>
@@ -380,19 +364,19 @@
                             <p>Tenure of Investment</p>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="group1" type="radio" checked />
+                                    <input class="with-gap" name="tenure" value="Short" type="radio" checked />
                                     <span>Short Term (upto 3 years)</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="group1" type="radio" />
+                                    <input class="with-gap" name="tenure" value="Medium" type="radio" />
                                     <span>Medium Term (3 to 7 years)</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="group1" type="radio" />
+                                    <input class="with-gap" name="tenure" value="Long" type="radio" />
                                     <span>Long Term (more than 7 years)</span>
                                 </label>
                             </p>
@@ -407,44 +391,44 @@
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="1"/>
                                     <span>Foreign Travel</span>
                                 </label>
                             </p>
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="2"/>
                                     <span>Marriage Anniversary</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="3"/>
                                     <span>Child's Birthday</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="4"/>
                                     <span>Honeymoon</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="5"/>
                                     <span>Own Marriage</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="6"/>
                                     <span>Tax Saving</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="7"/>
                                     <span>Health Expense for Parents</span>
                                 </label>
                             </p>
@@ -459,38 +443,38 @@
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="long-goal" value="1" />
                                     <span>Retirement</span>
                                 </label>
                             </p>
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="long-goal" value="2" />
                                     <span>Home Buying</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="long-goal" value="3" />
                                     <span>Car Buying</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="long-goal" value="4" />
                                     <span>Child's Education</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="long-goal" value="5" />
                                     <span>Child's Marriage</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" />
+                                    <input type="checkbox" class="filled-in" name="long-goal" value="6" />
                                     <span>Emergency Fund</span>
                                 </label>
                             </p>
@@ -503,7 +487,7 @@
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <select>
+                            <select name="pshyco1">
                                 <option value="1">I read most of the business and investment magazines and watch
                                     business updates on television daily</option>
                                 <option value="2">I read a financial newspaper daily and regularly read at least one
@@ -516,7 +500,7 @@
                         </div>
 
                         <div class="input-field col s12">
-                            <select>
+                            <select name="pshyco2">
                                 <option value="1">average your cost by investing another Rs 1,00,000 at a lower price.</option>
                                 <option value="2">do not bother because you had done enough research on the company.</option>
                                 <option value="3">book your loss and invest in fixed deposits or bonds</option>
