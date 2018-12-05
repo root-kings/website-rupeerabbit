@@ -172,21 +172,36 @@
 
 
                         <div class="input-field col s6">
-                            <input id="city" type="text" class="validate">
-                            <label for="city">City</label>
+
+
+                            <select>
+                                <option value="0" class="disabled">Select One</option>
+                                <option value="1">Tier 1</option>
+                                <option value="2">Tier 2</option>
+                                <option value="3">Tier 3</option>
+                            </select>
+                            <label>City</label>
                         </div>
 
                     </div>
                     <div class="row">
 
                         <div class="input-field col s6">
-                            <input id="name" type="number" class="validate">
-                            <label for="age">Age</label>
+                            <select>
+                                <option value="0" class="disabled">Select One</option>
+                                <option value="1">18 - 25</option>
+                                <option value="2">25 - 30</option>
+                                <option value="3">30 - 44</option>
+                                <option value="3">45 - 60</option>
+
+                            </select>
+                            <label>Age</label>
                         </div>
 
 
                         <div class="input-field col s6">
                             <select>
+                                <option value="0" class="disabled">Select One</option>
                                 <option value="1">Male</option>
                                 <option value="2">Female</option>
                                 <option value="3">Other</option>
@@ -226,11 +241,24 @@
 
                         <div class="input-field col s6">
                             <select>
+                                <option value="0">Select One</option>
                                 <option value="1">Business</option>
                                 <option value="2">Salary</option>
 
                             </select>
                             <label>Income Type</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <select>
+                                <option value="0">Select One</option>
+                                <option value="1">0 - 2</option>
+                                <option value="2">3 - 5</option>
+                                <option value="3">6 - 9</option>
+
+
+                            </select>
+                            <label>No. of Family Members Dependent</label>
                         </div>
                     </div>
 
@@ -331,6 +359,12 @@
                                 <label>
                                     <input type="checkbox" class="filled-in" />
                                     <span>Bond</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" class="filled-in" />
+                                    <span>Gold</span>
                                 </label>
                             </p>
 
@@ -1011,7 +1045,7 @@
     </footer>
 
 
-<!--
+    <!--
     <script>
         function monthly() {
             document.getElementById("compoundinterest").value = "Monthly";
