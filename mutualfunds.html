@@ -242,7 +242,7 @@
                     <br>
                     at an annualrate of
                     <input type="text" id="annualrate" required="required" style="width:200px" class="center" />%,
-                    </ul>
+                
                     <br><br>
                     <div id="result" class="center">
 
@@ -496,19 +496,24 @@
                 console.log("nan one");
             } else {
                 console.log('no nan one');
-                $("#title1").empty();
-                $("#title1").append("Expected Ammount")
-                $("#expectedammount").empty();
-                console.log("no nan one");
-                $("#expectedammount").append(roundedvalue);
-                $("#title2").empty();
-                $("#title2").append("Ammount Invested")
-                $("#ammountinvested").empty();
-                $("#ammountinvested").append(totalinvested);
-                $("#title3").empty();
-                $("#title3").append("Wealth Gain")
-                $("#wealthgain").empty();
-                $("#wealthgain").append(wealthgained);
+//                $("#title1").empty();
+//                $("#title1").append("Expected Ammount")
+//                $("#expectedammount").empty();
+//                console.log("no nan one");
+//                $("#expectedammount").append(roundedvalue);
+//                $("#title2").empty();
+//                $("#title2").append("Ammount Invested")
+//                $("#ammountinvested").empty();
+//                $("#ammountinvested").append(totalinvested);
+//                $("#title3").empty();
+//                $("#title3").append("Wealth Gain")
+//                $("#wealthgain").empty();
+//                $("#wealthgain").append(wealthgained);
+                console.log(" exp: " + roundedvalue);
+                console.log("inv: " + totalinvest);
+                console.log("weal: "+ wealthgained);
+                $("#result").empty();
+                $("#result").append("Your Maturity Value: " + roundedvalue)
             }
         }
 
