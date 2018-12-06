@@ -94,6 +94,27 @@
         }
 
 
+        @media screen and (max-width: 767px){
+            #main-img{
+                content:url("images/GRAPH-small.png");
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            #main-img{
+            content:url("images/GRAPH-medium.png");
+            }
+        }
+        @media (min-width: 992px){
+            #main-img{
+                content:url("images/GRAPH.png");
+            }
+        }
+        @media (min-width: 1200px) {
+            #main-img{
+                content:url("images/GRAPH.png");
+            }
+        }
 
     </style>
 </head>
@@ -145,7 +166,7 @@
     <div class="parallax-container" style="min-height:95vh">
 
         <div class="parallax">
-            <img src="images/GRAPH.png" alt="">
+            <img id="main-img" src="images/GRAPH.png" alt="">
         </div>
         <!-- <div class="parallax show-on-medium hide-on-large">
             <img src="images/GRAPH-medium.png" alt="">

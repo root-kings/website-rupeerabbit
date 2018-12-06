@@ -15,6 +15,10 @@
             font-family: 'Montserrat', sans-serif;
         }
     </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+
+
 </head>
 
 <body>
@@ -189,7 +193,7 @@
                                 <option value="3">26 - 30</option>
                                 <option value="2">30 - 44</option>
                                 <option value="1">45 - 60</option>
-                                
+
                             </select>
                             <label for="age">Age</label>
                         </div>
@@ -199,7 +203,7 @@
                             <select name="gender">
                                 <option value="3">Male</option>
                                 <option value="1">Female</option>
-                                
+
                             </select>
                             <label>Gender</label>
                         </div>
@@ -263,7 +267,7 @@
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" checked="checked" name="expenses" value="rents"/>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="expenses" value="rents" />
                                     <span>Rents</span>
                                 </label>
                             </p>
@@ -282,11 +286,11 @@
 
                         </div>
                         <div class="input-field col s6">
-                            
+
                             <select name="fundings">
                                 <option value="3">Yes</option>
                                 <option value="1">No</option>
-                                
+
                             </select>
                             <label for="fundings">Do you have funds for emergency?</label>
                         </div>
@@ -302,7 +306,7 @@
                                 <option value="2">5% to 20%</option>
                                 <option value="3">20% to 35%</option>
                                 <option value="3">35% to 70%</option>
-                                
+
                             </select>
                             <label>Monthly Savings</label>
                         </div>
@@ -313,38 +317,38 @@
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name='investments' value="2"/>
+                                    <input type="checkbox" class="filled-in" name='investments' value="2" />
                                     <span>Mutual Funds</span>
                                 </label>
                             </p>
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name='investments' value="1"/>
+                                    <input type="checkbox" class="filled-in" name='investments' value="1" />
                                     <span>Fixed Deposit</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name='investments' value="2"/>
+                                    <input type="checkbox" class="filled-in" name='investments' value="2" />
                                     <span>Land</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name='investments' value="3"/>
+                                    <input type="checkbox" class="filled-in" name='investments' value="3" />
                                     <span>Shares</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name='investments' value="1"/>
+                                    <input type="checkbox" class="filled-in" name='investments' value="1" />
                                     <span>Bond</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name='investments' value="2"/>
+                                    <input type="checkbox" class="filled-in" name='investments' value="2" />
                                     <span>Gold</span>
                                 </label>
                             </p>
@@ -388,44 +392,44 @@
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name="short-goal" value="1"/>
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="1" />
                                     <span>Foreign Travel</span>
                                 </label>
                             </p>
 
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name="short-goal" value="2"/>
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="2" />
                                     <span>Marriage Anniversary</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name="short-goal" value="3"/>
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="3" />
                                     <span>Child's Birthday</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name="short-goal" value="4"/>
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="4" />
                                     <span>Honeymoon</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name="short-goal" value="5"/>
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="5" />
                                     <span>Own Marriage</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name="short-goal" value="6"/>
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="6" />
                                     <span>Tax Saving</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" name="short-goal" value="7"/>
+                                    <input type="checkbox" class="filled-in" name="short-goal" value="7" />
                                     <span>Health Expense for Parents</span>
                                 </label>
                             </p>
@@ -516,6 +520,76 @@
                 </form>
             </div>
         </section>
+
+        <section class="center">
+            <div class="row">
+                <div class="col s6 push-s3 m4 push-m4">
+                    <canvas id="chart-area" width="240" height="120" class="chartjs-render-monitor" style="display: block; width: 240px; height: 120px;"></canvas>
+
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+
+        <script>
+            var randomScalingFactor = function () {
+                return Math.round(Math.random() * 100);
+            };
+
+            window.chartColors = {
+                red: 'rgb(255, 99, 132)',
+                orange: 'rgb(255, 159, 64)',
+                yellow: 'rgb(255, 205, 86)',
+                green: 'rgb(75, 192, 192)',
+                blue: 'rgb(54, 162, 235)',
+                purple: 'rgb(153, 102, 255)',
+                grey: 'rgb(201, 203, 207)'
+            };
+
+            var config = {
+                type: 'pie',
+                data: {
+                    datasets: [{
+                        data: [
+                            randomScalingFactor(),
+                            randomScalingFactor(),
+                            randomScalingFactor(),
+                            randomScalingFactor(),
+                            randomScalingFactor(),
+                        ],
+                        backgroundColor: [
+                            window.chartColors.red,
+                            window.chartColors.orange,
+                            window.chartColors.yellow,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                        ],
+                        label: 'Dataset 1'
+                    }],
+                    labels: [
+                        'Red',
+                        'Orange',
+                        'Yellow',
+                        'Green',
+                        'Blue'
+                    ]
+                },
+                options: {
+                    responsive: true
+                }
+            };
+
+            window.onload = function () {
+                var ctx = document.getElementById('chart-area').getContext('2d');
+                window.myPie = new Chart(ctx, config);
+            };
+
+            var colorNames = Object.keys(window.chartColors);
+        </script>
+
+
 
     </main>
 
