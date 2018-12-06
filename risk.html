@@ -521,10 +521,14 @@
             </div>
         </section>
 
+
+
+
+
         <section class="center">
             <div class="row">
                 <div class="col s6 push-s3 m4 push-m4">
-                    <canvas id="chart-area" width="240" height="120" class="chartjs-render-monitor" style="display: block; width: 240px; height: 120px;"></canvas>
+                    <canvas id="chart-area"></canvas>
 
                 </div>
             </div>
@@ -533,6 +537,83 @@
         </section>
 
 
+
+
+
+        <script src="http://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+
+        <script>
+            var opts = {
+                angle: 0, // The span of the gauge arc
+                lineWidth: 0.7, // The line thickness
+                radiusScale: 0.69, // Relative radius
+                pointer: {
+                    length: 0.84, // // Relative to gauge radius
+                    strokeWidth: 0.038, // The thickness
+                    color: '#000000' // Fill color
+                },
+                limitMax: true, // If false, max value increases automatically if value > maxValue
+                limitMin: true, // If true, the min value of the gauge will be fixed
+                colorStart: '#6FADCF', // Colors
+                colorStop: '#8FC0DA', // just experiment with them
+                strokeColor: '#E0E0E0', // to see which ones work best for you
+                generateGradient: true,
+                highDpiSupport: true, // High resolution support
+                staticZones: [{
+                        strokeStyle: "#008000",
+                        min: 0,
+                        max: 20
+                    }, // green from 100 to 130
+                    {
+                        strokeStyle: "#30B32D",
+                        min: 20,
+                        max: 40
+                    }, // 
+                    {
+                        strokeStyle: "#FFDD00",
+                        min: 40,
+                        max: 60
+                    }, // Yellow
+                    {
+                        strokeStyle: "#FFA500",
+                        min: 60,
+                        max: 80
+                    }, // Yellow
+                    {
+                        strokeStyle: "#F03E3E",
+                        min: 80,
+                        max: 100
+                    } // Red
+                ],
+                staticLabels: {
+                    font: "10px sans-serif", // Specifies font
+                    labels: [0,20,40,60,80,100], // Print labels at these values
+                    color: "#000000", // Optional: Label text color
+                    fractionDigits: 0 // Optional: Numerical precision. 0=round off.
+                },
+
+            };
+            var target = document.getElementById('chart-area'); // your canvas element
+            var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+            gauge.maxValue = 100; // set max gauge value
+            gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
+            gauge.animationSpeed = 32; // set animation speed (32 is default value)
+            gauge.set(45); // set actual value
+        </script>
+
+
+        <!-- <section class="center">
+            <div class="row">
+                <div class="col s6 push-s3 m4 push-m4">
+                    <canvas id="chart-area" width="240" height="120" class="chartjs-render-monitor" style="display: block; width: 240px; height: 120px;"></canvas>
+
+                </div>
+            </div>
+
+            </div>
+        </section> -->
+
+        <!-- 
         <script>
             var randomScalingFactor = function () {
                 return Math.round(Math.random() * 100);
@@ -587,7 +668,7 @@
             };
 
             var colorNames = Object.keys(window.chartColors);
-        </script>
+        </script> -->
 
 
 
