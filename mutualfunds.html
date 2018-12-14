@@ -25,9 +25,11 @@
         * {
             font-family: 'Montserrat', sans-serif;
         }
-        .slider .slides li{
-            opacity: 1;
+   
+        .carousel-item img {
+            width: 100px;
         }
+
     </style>
 </head>
 
@@ -178,7 +180,7 @@
                     </table>
 =======
                     </table> -->
-        </div>
+            </div>
         </div>
     </section>
 
@@ -234,17 +236,16 @@
                 <h5 class="center light">I've got Monthly Investment of<input type="text" id="investment" required="required"
                         style="width:200px" class="center" />
                     for the period of
-                    <br><input type="text" id="years" required style="width:200px"
-                        class="center" />
+                    <br><input type="text" id="years" required style="width:200px" class="center" />
                     years
 
                     at an annualrate of
                     <input type="text" id="annualrate" required="required" style="width:200px" class="center" />%,
-                
+
                     <br><br>
                     <div id="result" class="center">
 
-                        
+
 
                     </div>
                 </h5>
@@ -295,7 +296,7 @@
             <br>
             <div class="col s12 m4 right hide-on-small-only" style="overflow:hidden">
 
-                <img src="images/windor.png" alt="" style="max-width:57vh; margin-right: -10px" class="right" >
+                <img src="images/windor.png" alt="" style="max-width:57vh; margin-right: -10px" class="right">
             </div>
 
 
@@ -331,15 +332,15 @@
     </section>
 
     <section>
-
-        <div class="row">
-            <div class="col s12 center">
-                <img src="images/logo-rupeerabbit.svg" alt="" width="150">
-                <h2 style="font-weight: 900" class="center">HOW IT WORKS?</h2>
-            </div>
-        </div>
-
         <div class="container">
+            <div class="row">
+                <div class="col s12 center">
+                    <img src="images/logo-rupeerabbit.svg" alt="" width="150">
+                    <h2 style="font-weight: 900" class="center">HOW IT WORKS?</h2>
+                </div>
+            </div>
+
+
             <div class="row">
 
                 <div class="col s12 m4">
@@ -389,9 +390,93 @@
                 </div>
 
             </div>
+
+
+            <div class="row">
+                <div class="col s12 center">
+                    <a href="risk.html" class="btn btn-large z-depth-5" style="background: linear-gradient(135deg,#8f53d7,#1e83ef);">Take
+                        the risk assessment
+                        <i class="right material-icons">arrow_forward</i></a>
+                </div>
+            </div>
+
         </div>
 
     </section>
+
+
+
+
+
+    <section style="padding-top: 35px;">
+
+        <h2 style="font-weight: 900" class="center"> Our Partners</h2>
+        <!-- 
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m10 push-m1 l8 push-l2">
+                    <div id="carousel">
+
+                        <div class="carousel-item center red">
+                            <img src="images/partners/Axis.jpg" alt="fruit1" />
+                            <img src="images/partners/FranklinTempletonInvestments_Logo.jpg" alt="fruit1" />
+                            <img src="images/partners/SBI.jpg" alt="fruit1" />
+                            <img src="images/partners/UTI-logo.jpg" alt="fruit1" />
+                            <img src="images/partners/aditya birla.jpg" alt="fruit1" />
+                        </div>
+
+                        <div class="carousel-item center green">
+                            <img src="images/partners/hdfc.jpg" alt="fruit1" />
+                            <img src="images/partners/icici.jpg" alt="fruit1" />
+                            <img src="images/partners/idfc.jpg" alt="fruit1" />
+                            <img src="images/partners/kisspng-reliance-mutual-fund-investment-fund-finance-fundi-5ae19622974455.0770625815247334746196.jpg"
+                                alt="fruit1" />
+                            <img src="images/partners/tata.jpg" alt="fruit1" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elem = document.querySelectorAll('#carousel');
+                var instance = M.Carousel.init(elem, {
+                    numVisible: 10,
+                    fullwidth: true
+                });
+
+                //setInterval(instance.next(), 2000);
+
+                Pratik - 9423416467
+
+            });
+        </script>
+ -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8 push-m2 hide-on-large-only">
+                    <img src="images/rabbitback.png" alt="" width="380">
+                </div>
+                <div class="col l8 push-l2 hide-on-med-and-down">
+                    <img src="images/rabbitback.png" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+
+
+
+
     <footer class="page-footer" style="background-color: #00d09c">
         <div>
             <div class="row">
@@ -494,22 +579,22 @@
                 console.log("nan one");
             } else {
                 console.log('no nan one');
-//                $("#title1").empty();
-//                $("#title1").append("Expected Ammount")
-//                $("#expectedammount").empty();
-//                console.log("no nan one");
-//                $("#expectedammount").append(roundedvalue);
-//                $("#title2").empty();
-//                $("#title2").append("Ammount Invested")
-//                $("#ammountinvested").empty();
-//                $("#ammountinvested").append(totalinvested);
-//                $("#title3").empty();
-//                $("#title3").append("Wealth Gain")
-//                $("#wealthgain").empty();
-//                $("#wealthgain").append(wealthgained);
+                //                $("#title1").empty();
+                //                $("#title1").append("Expected Ammount")
+                //                $("#expectedammount").empty();
+                //                console.log("no nan one");
+                //                $("#expectedammount").append(roundedvalue);
+                //                $("#title2").empty();
+                //                $("#title2").append("Ammount Invested")
+                //                $("#ammountinvested").empty();
+                //                $("#ammountinvested").append(totalinvested);
+                //                $("#title3").empty();
+                //                $("#title3").append("Wealth Gain")
+                //                $("#wealthgain").empty();
+                //                $("#wealthgain").append(wealthgained);
                 console.log(" exp: " + roundedvalue);
                 console.log("inv: " + totalinvest);
-                console.log("weal: "+ wealthgained);
+                console.log("weal: " + wealthgained);
                 $("#result").empty();
                 $("#result").append("Your Maturity Value: " + roundedvalue)
             }
@@ -537,7 +622,7 @@
         });
     </script>
     <script src="js/index.js"></script>
-        </footer>
+    </footer>
     </section>
 </body>
 
