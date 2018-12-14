@@ -303,34 +303,13 @@
                     </p>
 
                     <p class="row col s12 center">FOR A PERIOD OF 25 YRS WOULD HAVE ACCUMULATED TO</p>
-                    <div class="col s12 l3">
-                        <div class="card">
-                            <div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">RupeeRabbit
-                                    <br> Savings</span></div>
+
+                    <div class="col s6 l3">
+                        <div class="card hoverable">
+                            <div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">Fixed
+                                    <br> Deposit</span></div>
                             <div class="card-content">
-                                <p class="center">FD Interest : 10.00% p.a. <br> Total Savings: <span id="rupeerabbit"></span></p>
-                            </div>
-                        </div>
-                        <!-- <div class="card blue valign-wrapper hoverable" style="transform: scale(1.1,1.1)">
-                            <div class="full-width">
-                                <p class="center">
-                                    <span id="rupeerabbit" class="calcval white-text"></span>
-                                </p>
-                                <p class="investtype purple-text text-darken-4 center">
-                                    RupeeRabbit
-                                </p>
-                                <p class="investrate center">
-                                    @ 10.00% p.a.
-                                </p>
-                            </div>
-                        </div> -->
-                    </div>
-                    <div class="col s12 l3">
-                        <div class="card">
-                            <div class="card-image"><img src="images/over.png" width="600"><span class="card-title">Gold
-                                    <br> Savings</span></div>
-                            <div class="card-content">
-                                <p class="center">FD Interest : 5.5% p.a. <br> Total Savings: <span id="gold"></span></p>
+                                <p class="center">Interest : 7.9% p.a. <br> Total Savings: <span id="fd"  style="font-weight: 600"></span></p>
                             </div>
                         </div>
 
@@ -348,13 +327,34 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="col s12 l3">
-                        <div class="card">
-                            <div class="card-image"><img src="images/smart.png" width="600"><span class="card-title">Axis
-                                    Bank
+                    <div class="col s6 l3">
+                        <div class="card hoverable" style="transform: scale(1.05,1.05)">
+                            <div class="card-image"><img src="images/over.png" width="600"><span class="card-title">RupeeRabbit
                                     <br> Savings</span></div>
                             <div class="card-content">
-                                <p class="center">FD Interest : @ 7.6% p.a. <br> Total Savings: <span id="axis"></span></p>
+                                <p class="center">Interest : 24.0% p.a. <br> Total Savings: <span id="rupeerabbit"  style="font-weight: 600"></span></p>
+                            </div>
+                        </div>
+                        <!-- <div class="card blue valign-wrapper hoverable" style="transform: scale(1.1,1.1)">
+                            <div class="full-width">
+                                <p class="center">
+                                    <span id="rupeerabbit" class="calcval white-text"></span>
+                                </p>
+                                <p class="investtype purple-text text-darken-4 center">
+                                    RupeeRabbit
+                                </p>
+                                <p class="investrate center">
+                                    @ 10.00% p.a.
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col s6 l3">
+                        <div class="card hoverable">
+                            <div class="card-image"><img src="images/smart.png" width="600"><span class="card-title">PPF
+                                    <br> Savings</span></div>
+                            <div class="card-content">
+                                <p class="center">Interest : 8.5% p.a. <br> Total Savings: <span id="ppf"  style="font-weight: 600"></span></p>
                             </div>
                         </div>
                         <!-- <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
@@ -371,13 +371,12 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="col s12 l3">
-                        <div class="card">
-                            <div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">ICICI
-                                    Bank
+                    <div class="col s6 l3">
+                        <div class="card hoverable">
+                            <div class="card-image"><img src="images/auto.png" width="600"><span class="card-title">SENSEX
                                     <br> Savings</span></div>
                             <div class="card-content">
-                                <p class="center">FD Interest : 7.25% p.a. <br> Total Savings: <span id="icici"></span></p>
+                                <p class="center">Interest : 15% p.a. <br> Total Savings: <span id="sensex"  style="font-weight: 600"></span></p>
                             </div>
                         </div>
                         <!-- <div class="card blue-grey valign-wrapper lighten-5 hoverable  ">
@@ -416,10 +415,34 @@
 
                     function updatedata() {
                         var investment = $("#investinput").val();
-                        $("#rupeerabbit").html((investment * 25 + investment * 10 / 100 * 25).toFixed(2));
-                        $("#gold").html((investment * 25 + investment * 5.5 / 100 * 25).toFixed(2));
-                        $("#axis").html((investment * 25 + investment * 7 / 100 * 25).toFixed(2));
-                        $("#icici").html((investment * 25 + investment * 7.25 / 100 * 25).toFixed(2));
+
+                        var base = investment * 25 + investment / 100 * 25;
+
+                        var rate = {
+                            rupeerabbit: 24,
+                            fd: 7.9,
+                            ppf: 8.5,
+                            sensex: 15
+                        };
+
+                        var amounts = {
+                            rupeerabbit: base * rate.rupeerabbit,
+                            fd: base * rate.fd,
+                            ppf: base * rate.ppf,
+                            sensex: base * rate.sensex,
+                        };
+
+                        var rounded = {
+                            rupeerabbit: Math.floor(amounts.rupeerabbit / 100000), // in lakh
+                            fd: Math.floor(amounts.fd / 100000), // in lakh
+                            ppf: Math.floor(amounts.ppf / 100000), // in lakh
+                            sensex: Math.floor(amounts.sensex / 100000), // in lakh
+                        };
+
+                        $("#rupeerabbit").html(rounded.rupeerabbit + " L");
+                        $("#fd").html(rounded.fd + " L");
+                        $("#ppf").html(rounded.ppf + " L");
+                        $("#sensex").html(rounded.sensex + " L");
                     }
 
                     $(document).ready(function () {
